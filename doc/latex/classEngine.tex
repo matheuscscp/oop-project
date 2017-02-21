@@ -1,0 +1,264 @@
+\hypertarget{classEngine}{
+\section{Referência da Classe Engine}
+\label{classEngine}\index{Engine@{Engine}}
+}
+
+
+Definicoes da classe que lida com a interface do programa.  
+
+
+
+
+{\ttfamily \#include $<$engine.hpp$>$}
+
+
+
+Diagrama de colaboração para Engine:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{classEngine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classEngine_ab44d76e2ff6057e73d6210cf9af0d89e}{
+void \hyperlink{classEngine_ab44d76e2ff6057e73d6210cf9af0d89e}{init} ()  throw (ExcecaoEngineCrash)}
+\label{classEngine_ab44d76e2ff6057e73d6210cf9af0d89e}
+
+\begin{DoxyCompactList}\small\item\em Inicializa todas as imagens fontes e variaveis de controle da engine. \item\end{DoxyCompactList}\item 
+\hypertarget{classEngine_a6f00047153c2581a74c7c1912bfe5f36}{
+void \hyperlink{classEngine_a6f00047153c2581a74c7c1912bfe5f36}{close} ()  throw ()}
+\label{classEngine_a6f00047153c2581a74c7c1912bfe5f36}
+
+\begin{DoxyCompactList}\small\item\em Libera toda a memoria ocupada pelas imagens e fontes da engine. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classEngine_a48f2c65930db95cea14ab5560d031bc7}{quit} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Checa se o usuario solicitou a saida do programa. \item\end{DoxyCompactList}\item 
+\hypertarget{classEngine_a081e88135ccc992086baf8511963e185}{
+void \hyperlink{classEngine_a081e88135ccc992086baf8511963e185}{atualizarTela} ()  throw ()}
+\label{classEngine_a081e88135ccc992086baf8511963e185}
+
+\begin{DoxyCompactList}\small\item\em Imprime na tela todos os objetos de uma partida do jogo de Domino. \item\end{DoxyCompactList}\item 
+void \hyperlink{classEngine_a1311380efe1b58d05823df25493ad94a}{setLogMsg} (std::string log\_\-msg)  throw ()
+\begin{DoxyCompactList}\small\item\em Lanca uma nova mensagem de log. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classEngine_aff02f15a2f3bf697dadfc6f6246ffb20}{imprimindoLogMsgs} (void)  throw ()
+\begin{DoxyCompactList}\small\item\em Verifica o estado da impressao das mensagens de log. \item\end{DoxyCompactList}\item 
+void \hyperlink{classEngine_ad1942265a77a1e2fd8eaaac042d6428f}{mostrarLogo} (int mensagem, int delay)  throw ()
+\begin{DoxyCompactList}\small\item\em Mostra um quadro com a mensagem de boas-\/vindas/ate-\/logo. \item\end{DoxyCompactList}\item 
+int \hyperlink{classEngine_ac571cfb9db59c34ee344033d481d951d}{getAlturaPeca} (void)  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+int \hyperlink{classEngine_a42ff065d53469219cb2fb71672b6d157}{getLarguraPeca} (void)  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+int \hyperlink{classEngine_ad2cb6693d7f8615399a9b6a1384b7fb7}{getLarguraMaoOponentes} (void)  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+void \hyperlink{classEngine_aa1b503d190c6cf01a5f317954cc954eb}{insereSlotComeco} (\hyperlink{classSlotPeca}{SlotPeca} slot)  throw ()
+\begin{DoxyCompactList}\small\item\em Insere um slot de peca na lista para exibicao na tela. \item\end{DoxyCompactList}\item 
+void \hyperlink{classEngine_a6d4ad083eb125652810bc7f36091d0a3}{insereSlotFim} (\hyperlink{classSlotPeca}{SlotPeca} slot)  throw ()
+\begin{DoxyCompactList}\small\item\em Insere um slot de peca na lista para exibicao na tela. \item\end{DoxyCompactList}\item 
+\hypertarget{classEngine_a2d85b68730cd1b731febc630d80ff3e0}{
+void \hyperlink{classEngine_a2d85b68730cd1b731febc630d80ff3e0}{resetarSlots} ()  throw ()}
+\label{classEngine_a2d85b68730cd1b731febc630d80ff3e0}
+
+\begin{DoxyCompactList}\small\item\em Esvazia a lista de slots de pecas. \item\end{DoxyCompactList}\item 
+std::list$<$ \hyperlink{classSlotPeca}{SlotPeca} $>$ \& \hyperlink{classEngine_a26fd5a5381537312c47f226ff1c59ff0}{getSlotPecas} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Este metodo retorna uma referencia para a lista de slots de pecas. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classEngine}{Engine} $\ast$ \hyperlink{classEngine_a8c567b3e3b92b9916f45afaa9f25c26d}{instance} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo para instanciar ou apenas retornar o ponteiro do singleton da engine. \item\end{DoxyCompactList}\item 
+\hypertarget{classEngine_a8dce3f00292c2ba2d9828ad32306974b}{
+static void \hyperlink{classEngine_a8dce3f00292c2ba2d9828ad32306974b}{delete\_\-instance} ()  throw ()}
+\label{classEngine_a8dce3f00292c2ba2d9828ad32306974b}
+
+\begin{DoxyCompactList}\small\item\em Metodo para liberar a instancia unica do singleton da engine. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Definicoes da classe que lida com a interface do programa. 
+
+\subsection{Métodos}
+\hypertarget{classEngine_ac571cfb9db59c34ee344033d481d951d}{
+\index{Engine@{Engine}!getAlturaPeca@{getAlturaPeca}}
+\index{getAlturaPeca@{getAlturaPeca}!Engine@{Engine}}
+\subsubsection[{getAlturaPeca}]{\setlength{\rightskip}{0pt plus 5cm}int Engine::getAlturaPeca (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classEngine_ac571cfb9db59c34ee344033d481d951d}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Altura em pixels de uma peca 
+\end{DoxyReturn}
+\hypertarget{classEngine_ad2cb6693d7f8615399a9b6a1384b7fb7}{
+\index{Engine@{Engine}!getLarguraMaoOponentes@{getLarguraMaoOponentes}}
+\index{getLarguraMaoOponentes@{getLarguraMaoOponentes}!Engine@{Engine}}
+\subsubsection[{getLarguraMaoOponentes}]{\setlength{\rightskip}{0pt plus 5cm}int Engine::getLarguraMaoOponentes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classEngine_ad2cb6693d7f8615399a9b6a1384b7fb7}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Largura em pixels de uma peca na mao dos oponentes 
+\end{DoxyReturn}
+\hypertarget{classEngine_a42ff065d53469219cb2fb71672b6d157}{
+\index{Engine@{Engine}!getLarguraPeca@{getLarguraPeca}}
+\index{getLarguraPeca@{getLarguraPeca}!Engine@{Engine}}
+\subsubsection[{getLarguraPeca}]{\setlength{\rightskip}{0pt plus 5cm}int Engine::getLarguraPeca (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classEngine_a42ff065d53469219cb2fb71672b6d157}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Largura em pixels de uma peca 
+\end{DoxyReturn}
+\hypertarget{classEngine_a26fd5a5381537312c47f226ff1c59ff0}{
+\index{Engine@{Engine}!getSlotPecas@{getSlotPecas}}
+\index{getSlotPecas@{getSlotPecas}!Engine@{Engine}}
+\subsubsection[{getSlotPecas}]{\setlength{\rightskip}{0pt plus 5cm}std::list$<${\bf SlotPeca}$>$\& Engine::getSlotPecas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classEngine_a26fd5a5381537312c47f226ff1c59ff0}
+
+
+Este metodo retorna uma referencia para a lista de slots de pecas. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia para a lista de slots de pecas 
+\end{DoxyReturn}
+\hypertarget{classEngine_aff02f15a2f3bf697dadfc6f6246ffb20}{
+\index{Engine@{Engine}!imprimindoLogMsgs@{imprimindoLogMsgs}}
+\index{imprimindoLogMsgs@{imprimindoLogMsgs}!Engine@{Engine}}
+\subsubsection[{imprimindoLogMsgs}]{\setlength{\rightskip}{0pt plus 5cm}bool Engine::imprimindoLogMsgs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classEngine_aff02f15a2f3bf697dadfc6f6246ffb20}
+
+
+Verifica o estado da impressao das mensagens de log. 
+
+\begin{DoxyReturn}{Retorna}
+true se estiver imprimindo uma mensagem de log, false em caso contrario 
+\end{DoxyReturn}
+\hypertarget{classEngine_aa1b503d190c6cf01a5f317954cc954eb}{
+\index{Engine@{Engine}!insereSlotComeco@{insereSlotComeco}}
+\index{insereSlotComeco@{insereSlotComeco}!Engine@{Engine}}
+\subsubsection[{insereSlotComeco}]{\setlength{\rightskip}{0pt plus 5cm}void Engine::insereSlotComeco (
+\begin{DoxyParamCaption}
+\item[{{\bf SlotPeca}}]{ slot}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classEngine_aa1b503d190c6cf01a5f317954cc954eb}
+
+
+Insere um slot de peca na lista para exibicao na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em slot}]Slot de peca na mesa a ser inserido no comeco da lista para exibicao na tela \end{DoxyParams}
+\hypertarget{classEngine_a6d4ad083eb125652810bc7f36091d0a3}{
+\index{Engine@{Engine}!insereSlotFim@{insereSlotFim}}
+\index{insereSlotFim@{insereSlotFim}!Engine@{Engine}}
+\subsubsection[{insereSlotFim}]{\setlength{\rightskip}{0pt plus 5cm}void Engine::insereSlotFim (
+\begin{DoxyParamCaption}
+\item[{{\bf SlotPeca}}]{ slot}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classEngine_a6d4ad083eb125652810bc7f36091d0a3}
+
+
+Insere um slot de peca na lista para exibicao na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em slot}]Slot de peca na mesa a ser inserido no fim da lista para exibicao na tela \end{DoxyParams}
+\hypertarget{classEngine_a8c567b3e3b92b9916f45afaa9f25c26d}{
+\index{Engine@{Engine}!instance@{instance}}
+\index{instance@{instance}!Engine@{Engine}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Engine} $\ast$ Engine::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classEngine_a8c567b3e3b92b9916f45afaa9f25c26d}
+
+
+Metodo para instanciar ou apenas retornar o ponteiro do singleton da engine. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna o ponteiro da instancia unica do singleton da engine 
+\end{DoxyReturn}
+\hypertarget{classEngine_ad1942265a77a1e2fd8eaaac042d6428f}{
+\index{Engine@{Engine}!mostrarLogo@{mostrarLogo}}
+\index{mostrarLogo@{mostrarLogo}!Engine@{Engine}}
+\subsubsection[{mostrarLogo}]{\setlength{\rightskip}{0pt plus 5cm}void Engine::mostrarLogo (
+\begin{DoxyParamCaption}
+\item[{int}]{ mensagem, }
+\item[{int}]{ delay}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classEngine_ad1942265a77a1e2fd8eaaac042d6428f}
+
+
+Mostra um quadro com a mensagem de boas-\/vindas/ate-\/logo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em mensagem}]Linha da matriz da imagem que contem as duas mensagens \item[{\em delay}]Tempo em segundos a esperar mostrando a logo do jogo \end{DoxyParams}
+\hypertarget{classEngine_a48f2c65930db95cea14ab5560d031bc7}{
+\index{Engine@{Engine}!quit@{quit}}
+\index{quit@{quit}!Engine@{Engine}}
+\subsubsection[{quit}]{\setlength{\rightskip}{0pt plus 5cm}bool Engine::quit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classEngine_a48f2c65930db95cea14ab5560d031bc7}
+
+
+Checa se o usuario solicitou a saida do programa. 
+
+\begin{DoxyReturn}{Retorna}
+true se o usuario solicitou a saida do programa, ou false em caso contrario 
+\end{DoxyReturn}
+\hypertarget{classEngine_a1311380efe1b58d05823df25493ad94a}{
+\index{Engine@{Engine}!setLogMsg@{setLogMsg}}
+\index{setLogMsg@{setLogMsg}!Engine@{Engine}}
+\subsubsection[{setLogMsg}]{\setlength{\rightskip}{0pt plus 5cm}void Engine::setLogMsg (
+\begin{DoxyParamCaption}
+\item[{std::string}]{ log\_\-msg}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classEngine_a1311380efe1b58d05823df25493ad94a}
+
+
+Lanca uma nova mensagem de log. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em log\_\-msg}]String da mensagem que sera mostrada \end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/view/\hyperlink{engine_8hpp}{engine.hpp}\item 
+src/view/\hyperlink{engine_8cpp}{engine.cpp}\end{DoxyCompactItemize}

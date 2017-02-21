@@ -1,0 +1,278 @@
+\hypertarget{classJogador}{
+\section{Referência da Classe Jogador}
+\label{classJogador}\index{Jogador@{Jogador}}
+}
+
+
+Representa um jogador do jogo de Domino.  
+
+
+
+
+{\ttfamily \#include $<$jogador.hpp$>$}
+
+
+
+Diagrama de colaboração para Jogador:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classJogador__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classJogador_a94a4939138ce04d2f3ceb68257517ac1}{
+\hyperlink{classJogador_a94a4939138ce04d2f3ceb68257517ac1}{Jogador} ()  throw ()}
+\label{classJogador_a94a4939138ce04d2f3ceb68257517ac1}
+
+\begin{DoxyCompactList}\small\item\em Construtor singleton nao privado para possibilitar testes unitarios. \item\end{DoxyCompactList}\item 
+\hypertarget{classJogador_a3e62c32199fc9cfbcf22cf83f9008be6}{
+\hyperlink{classJogador_a3e62c32199fc9cfbcf22cf83f9008be6}{$\sim$Jogador} ()  throw ()}
+\label{classJogador_a3e62c32199fc9cfbcf22cf83f9008be6}
+
+\begin{DoxyCompactList}\small\item\em Destrutor singleton nao privado para possibilitar testes unitarios. \item\end{DoxyCompactList}\item 
+\hypertarget{classJogador_a7ccde2c632166a00e6d91a7b1c7bf030}{
+void \hyperlink{classJogador_a7ccde2c632166a00e6d91a7b1c7bf030}{resetarPontuacao} ()  throw ()}
+\label{classJogador_a7ccde2c632166a00e6d91a7b1c7bf030}
+
+\begin{DoxyCompactList}\small\item\em Reseta os pontos de um jogador. \item\end{DoxyCompactList}\item 
+\hypertarget{classJogador_ab581fd038c970e1de055e2a49ec9c609}{
+void \hyperlink{classJogador_ab581fd038c970e1de055e2a49ec9c609}{devolverPecas} ()  throw ()}
+\label{classJogador_ab581fd038c970e1de055e2a49ec9c609}
+
+\begin{DoxyCompactList}\small\item\em Esvazia a lista de indices de pecas. \item\end{DoxyCompactList}\item 
+void \hyperlink{classJogador_ac4b77743044e2595e7a849f42059e705}{pegarPeca} (int indice\_\-peca)  throw ()
+\begin{DoxyCompactList}\small\item\em Adiciona um indice de peca a lista de indices. \item\end{DoxyCompactList}\item 
+\hypertarget{classJogador_adebea5e3251e37c04af4bd322af56dc5}{
+void \hyperlink{classJogador_adebea5e3251e37c04af4bd322af56dc5}{jogarPelado} ()  throw ()}
+\label{classJogador_adebea5e3251e37c04af4bd322af56dc5}
+
+\begin{DoxyCompactList}\small\item\em Elimina o pelado da lista de pecas. \item\end{DoxyCompactList}\item 
+int \hyperlink{classJogador_af2737d00fb2e622a3f6efc16fd2ffe53}{jogarPrimeiraPeca} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Elimina o primeiro indice de peca deste jogador e retorna o indice. \item\end{DoxyCompactList}\item 
+\hypertarget{classJogador_adaa1fda004b5db6610b0c8976634c70f}{
+void \hyperlink{classJogador_adaa1fda004b5db6610b0c8976634c70f}{mudarFlagJogando} ()  throw ()}
+\label{classJogador_adaa1fda004b5db6610b0c8976634c70f}
+
+\begin{DoxyCompactList}\small\item\em Atualiza a flag que diz se o jogandor esta jogando. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classJogador_a0270123a28f581760fab650d9fba95e9}{jogando} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Checa se o jogador esta jogando naquele momento. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classJogador_a57ea21369a77f6d39d0082d562ac1c28}{naoTemPelado} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Retorna um valor logico para indicar se o jogando possui o pelado ou nao. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classJogador_a50bda4df4a489933cdaf1fe9daef0c89}{podeJogar} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Verifica se um jogador pode jogar em um dado turno. \item\end{DoxyCompactList}\item 
+\hyperlink{structsJogada}{sJogada} \hyperlink{classJogador_a591a5832e0204c20740adda8e872e026}{fazerJogada} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Procura e faz uma jogada, eliminando o indice da peca da lista. \item\end{DoxyCompactList}\item 
+int \hyperlink{classJogador_a507ec2dd2de59c29ce3ce0858ff7e013}{getTotalPecas} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+int \hyperlink{classJogador_a3aa048567359dfd36094feac3519e567}{getPontuacao} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+std::string \& \hyperlink{classJogador_a28dda560df2901fe50879e3db38b049e}{getNick} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+\hypertarget{classJogador_a8a53830073199caffe60e9d048b2b149}{
+void \hyperlink{classJogador_a8a53830073199caffe60e9d048b2b149}{acumularPontos} ()  throw ()}
+\label{classJogador_a8a53830073199caffe60e9d048b2b149}
+
+\begin{DoxyCompactList}\small\item\em Soma conta os pontos que sobraram na mao do jogador e acumula ao seu placar. \item\end{DoxyCompactList}\item 
+std::list$<$ int $>$ \& \hyperlink{classJogador_a9443baea87ab6a121f9c0eb972b2a215}{getIndicePecas} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Retorna uma referencia para a lista de indices de pecas deste jogador. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classJogador}{Jogador} $\ast$ \hyperlink{classJogador_ae7fa7dab6eb891becc88e50f8c418599}{instance} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Instancia ou apenas retorna o ponteiro da instancia do singleton de jogadores. \item\end{DoxyCompactList}\item 
+\hypertarget{classJogador_a932bd3da3233fca665597ee3de31f34a}{
+static void \hyperlink{classJogador_a932bd3da3233fca665597ee3de31f34a}{delete\_\-instance} ()  throw ()}
+\label{classJogador_a932bd3da3233fca665597ee3de31f34a}
+
+\begin{DoxyCompactList}\small\item\em Libera a instancia do singleton de jogadores. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Representa um jogador do jogo de Domino. 
+
+\subsection{Métodos}
+\hypertarget{classJogador_a591a5832e0204c20740adda8e872e026}{
+\index{Jogador@{Jogador}!fazerJogada@{fazerJogada}}
+\index{fazerJogada@{fazerJogada}!Jogador@{Jogador}}
+\subsubsection[{fazerJogada}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sJogada} Jogador::fazerJogada (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classJogador_a591a5832e0204c20740adda8e872e026}
+
+
+Procura e faz uma jogada, eliminando o indice da peca da lista. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna uma jogada ja feita 
+\end{DoxyReturn}
+\hypertarget{classJogador_a9443baea87ab6a121f9c0eb972b2a215}{
+\index{Jogador@{Jogador}!getIndicePecas@{getIndicePecas}}
+\index{getIndicePecas@{getIndicePecas}!Jogador@{Jogador}}
+\subsubsection[{getIndicePecas}]{\setlength{\rightskip}{0pt plus 5cm}std::list$<$int$>$\& Jogador::getIndicePecas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classJogador_a9443baea87ab6a121f9c0eb972b2a215}
+
+
+Retorna uma referencia para a lista de indices de pecas deste jogador. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia para a lista de indices de pecas do jogador 
+\end{DoxyReturn}
+\hypertarget{classJogador_a28dda560df2901fe50879e3db38b049e}{
+\index{Jogador@{Jogador}!getNick@{getNick}}
+\index{getNick@{getNick}!Jogador@{Jogador}}
+\subsubsection[{getNick}]{\setlength{\rightskip}{0pt plus 5cm}std::string\& Jogador::getNick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classJogador_a28dda560df2901fe50879e3db38b049e}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+A string do nick do jogador 
+\end{DoxyReturn}
+\hypertarget{classJogador_a3aa048567359dfd36094feac3519e567}{
+\index{Jogador@{Jogador}!getPontuacao@{getPontuacao}}
+\index{getPontuacao@{getPontuacao}!Jogador@{Jogador}}
+\subsubsection[{getPontuacao}]{\setlength{\rightskip}{0pt plus 5cm}int Jogador::getPontuacao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classJogador_a3aa048567359dfd36094feac3519e567}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Pontuacao do jogador na partida 
+\end{DoxyReturn}
+\hypertarget{classJogador_a507ec2dd2de59c29ce3ce0858ff7e013}{
+\index{Jogador@{Jogador}!getTotalPecas@{getTotalPecas}}
+\index{getTotalPecas@{getTotalPecas}!Jogador@{Jogador}}
+\subsubsection[{getTotalPecas}]{\setlength{\rightskip}{0pt plus 5cm}int Jogador::getTotalPecas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classJogador_a507ec2dd2de59c29ce3ce0858ff7e013}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Total de pecas do jogador 
+\end{DoxyReturn}
+\hypertarget{classJogador_ae7fa7dab6eb891becc88e50f8c418599}{
+\index{Jogador@{Jogador}!instance@{instance}}
+\index{instance@{instance}!Jogador@{Jogador}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Jogador} $\ast$ Jogador::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classJogador_ae7fa7dab6eb891becc88e50f8c418599}
+
+
+Instancia ou apenas retorna o ponteiro da instancia do singleton de jogadores. 
+
+\begin{DoxyReturn}{Retorna}
+Instancia do singleton dos jogadores 
+\end{DoxyReturn}
+\hypertarget{classJogador_a0270123a28f581760fab650d9fba95e9}{
+\index{Jogador@{Jogador}!jogando@{jogando}}
+\index{jogando@{jogando}!Jogador@{Jogador}}
+\subsubsection[{jogando}]{\setlength{\rightskip}{0pt plus 5cm}bool Jogador::jogando (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classJogador_a0270123a28f581760fab650d9fba95e9}
+
+
+Checa se o jogador esta jogando naquele momento. 
+
+\begin{DoxyReturn}{Retorna}
+true se o jogando estiver jogando naquele momento, ou false em caso contrario 
+\end{DoxyReturn}
+\hypertarget{classJogador_af2737d00fb2e622a3f6efc16fd2ffe53}{
+\index{Jogador@{Jogador}!jogarPrimeiraPeca@{jogarPrimeiraPeca}}
+\index{jogarPrimeiraPeca@{jogarPrimeiraPeca}!Jogador@{Jogador}}
+\subsubsection[{jogarPrimeiraPeca}]{\setlength{\rightskip}{0pt plus 5cm}int Jogador::jogarPrimeiraPeca (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classJogador_af2737d00fb2e622a3f6efc16fd2ffe53}
+
+
+Elimina o primeiro indice de peca deste jogador e retorna o indice. 
+
+\begin{DoxyReturn}{Retorna}
+Indice da primeira peca deste jogador 
+\end{DoxyReturn}
+\hypertarget{classJogador_a57ea21369a77f6d39d0082d562ac1c28}{
+\index{Jogador@{Jogador}!naoTemPelado@{naoTemPelado}}
+\index{naoTemPelado@{naoTemPelado}!Jogador@{Jogador}}
+\subsubsection[{naoTemPelado}]{\setlength{\rightskip}{0pt plus 5cm}bool Jogador::naoTemPelado (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classJogador_a57ea21369a77f6d39d0082d562ac1c28}
+
+
+Retorna um valor logico para indicar se o jogando possui o pelado ou nao. 
+
+\begin{DoxyReturn}{Retorna}
+Valor logico indicando se o jogador tem ou nao o pelado 
+\end{DoxyReturn}
+\hypertarget{classJogador_ac4b77743044e2595e7a849f42059e705}{
+\index{Jogador@{Jogador}!pegarPeca@{pegarPeca}}
+\index{pegarPeca@{pegarPeca}!Jogador@{Jogador}}
+\subsubsection[{pegarPeca}]{\setlength{\rightskip}{0pt plus 5cm}void Jogador::pegarPeca (
+\begin{DoxyParamCaption}
+\item[{int}]{ indice\_\-peca}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classJogador_ac4b77743044e2595e7a849f42059e705}
+
+
+Adiciona um indice de peca a lista de indices. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em indice\_\-peca}]Indice da peca que o jogador esta obtendo \end{DoxyParams}
+\hypertarget{classJogador_a50bda4df4a489933cdaf1fe9daef0c89}{
+\index{Jogador@{Jogador}!podeJogar@{podeJogar}}
+\index{podeJogar@{podeJogar}!Jogador@{Jogador}}
+\subsubsection[{podeJogar}]{\setlength{\rightskip}{0pt plus 5cm}bool Jogador::podeJogar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classJogador_a50bda4df4a489933cdaf1fe9daef0c89}
+
+
+Verifica se um jogador pode jogar em um dado turno. 
+
+\begin{DoxyReturn}{Retorna}
+true se o jogador pode jogar, ou false em caso contrario 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/model/\hyperlink{jogador_8hpp}{jogador.hpp}\item 
+src/model/\hyperlink{jogador_8cpp}{jogador.cpp}\end{DoxyCompactItemize}

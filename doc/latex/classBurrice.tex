@@ -1,0 +1,101 @@
+\hypertarget{classBurrice}{
+\section{Referência da Classe Burrice}
+\label{classBurrice}\index{Burrice@{Burrice}}
+}
+
+
+Implementacao do nivel de inteligencia artificial mais \char`\"{}burro\char`\"{} possivel para o jogo de Domino, vulgo RANDOM!!  
+
+
+
+
+{\ttfamily \#include $<$jogador.hpp$>$}
+
+
+
+Diagrama de Hierarquia para Burrice:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classBurrice__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Burrice:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classBurrice__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBurrice_af6cbbc7dce3018615725d45831e8c5f6}{
+\hyperlink{classBurrice_af6cbbc7dce3018615725d45831e8c5f6}{Burrice} ()}
+\label{classBurrice_af6cbbc7dce3018615725d45831e8c5f6}
+
+\begin{DoxyCompactList}\small\item\em Construtor. \item\end{DoxyCompactList}\item 
+int \hyperlink{classBurrice_a6ca38eb99bc6cf3d106b915bad981178}{jogarPrimeiraPeca} (\hyperlink{classJogador}{Jogador} $\ast$jogador)
+\begin{DoxyCompactList}\small\item\em Comeca com a primeira peca da mao do jogador. \item\end{DoxyCompactList}\item 
+\hyperlink{structsJogada}{sJogada} \hyperlink{classBurrice_ae5f4b6a9faf6217e76f403d76cc50a68}{fazerJogada} (\hyperlink{classJogador}{Jogador} $\ast$jogador)
+\begin{DoxyCompactList}\small\item\em Encaixa a primeira tentativa que der certo. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Implementacao do nivel de inteligencia artificial mais \char`\"{}burro\char`\"{} possivel para o jogo de Domino, vulgo RANDOM!! 
+
+\subsection{Métodos}
+\hypertarget{classBurrice_ae5f4b6a9faf6217e76f403d76cc50a68}{
+\index{Burrice@{Burrice}!fazerJogada@{fazerJogada}}
+\index{fazerJogada@{fazerJogada}!Burrice@{Burrice}}
+\subsubsection[{fazerJogada}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sJogada} Burrice::fazerJogada (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{ jogador}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classBurrice_ae5f4b6a9faf6217e76f403d76cc50a68}
+
+
+Encaixa a primeira tentativa que der certo. 
+
+Ordem das tentativas (uma peca depois da outra): pecaLadoA com comecoMesa pecaLadoA com fimMesa pecaLadoB com comecoMesa pecaLadoB com fimMesa 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogador}]Ponteiro para o jogador que esta executando a jogada \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Jogada feita pela inteligencia artificial deste jogador 
+\end{DoxyReturn}
+
+
+Implementa \hyperlink{classInteligencia_acb6757c0a14fa9d437d99a777af981ba}{Inteligencia}.
+
+\hypertarget{classBurrice_a6ca38eb99bc6cf3d106b915bad981178}{
+\index{Burrice@{Burrice}!jogarPrimeiraPeca@{jogarPrimeiraPeca}}
+\index{jogarPrimeiraPeca@{jogarPrimeiraPeca}!Burrice@{Burrice}}
+\subsubsection[{jogarPrimeiraPeca}]{\setlength{\rightskip}{0pt plus 5cm}int Burrice::jogarPrimeiraPeca (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{ jogador}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classBurrice_a6ca38eb99bc6cf3d106b915bad981178}
+
+
+Comeca com a primeira peca da mao do jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogador}]Ponteiro para o jogador que esta executando a jogada \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Indice da peca que foi jogada 
+\end{DoxyReturn}
+
+
+Implementa \hyperlink{classInteligencia_ad66cee21015269f35772042f9fa2b97c}{Inteligencia}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/model/\hyperlink{jogador_8hpp}{jogador.hpp}\item 
+src/model/\hyperlink{jogador_8cpp}{jogador.cpp}\end{DoxyCompactItemize}

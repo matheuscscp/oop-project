@@ -1,0 +1,135 @@
+\hypertarget{classPeca}{
+\section{Referência da Classe Peca}
+\label{classPeca}\index{Peca@{Peca}}
+}
+
+
+Representa as pecas do jogo.  
+
+
+
+
+{\ttfamily \#include $<$peca.hpp$>$}
+
+
+
+Diagrama de colaboração para Peca:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classPeca__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classPeca_ac4cdffabf0200c1afdd295e61174c824}{getLadoA} ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+int \hyperlink{classPeca_a3d5c0c01298e00552d525dad307c9438}{getLadoB} ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classPeca_a0e206bb71b79bda0f4afc3cc2a3cdd89}{bucha} ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{classPeca_aebeb13e1a53f511cf9a21b2505b66d34}{getNome} ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classPeca}{Peca} $\ast$ \hyperlink{classPeca_a863feb25d9163cb47306f86fc7fe4273}{instance} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Instancia o singleton das pecas ou apenas retorna uma copia da peca indicada pelo parametro passado. \item\end{DoxyCompactList}\item 
+\hypertarget{classPeca_acbb93a2f56bfe7c7b6868bb9cef76fda}{
+static void \hyperlink{classPeca_acbb93a2f56bfe7c7b6868bb9cef76fda}{delete\_\-instance} ()  throw ()}
+\label{classPeca_acbb93a2f56bfe7c7b6868bb9cef76fda}
+
+\begin{DoxyCompactList}\small\item\em Libera as pecas do singleton. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Representa as pecas do jogo. 
+
+\subsection{Métodos}
+\hypertarget{classPeca_a0e206bb71b79bda0f4afc3cc2a3cdd89}{
+\index{Peca@{Peca}!bucha@{bucha}}
+\index{bucha@{bucha}!Peca@{Peca}}
+\subsubsection[{bucha}]{\setlength{\rightskip}{0pt plus 5cm}bool Peca::bucha (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classPeca_a0e206bb71b79bda0f4afc3cc2a3cdd89}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+true se o lado A e igual ao lado B, ou false em caso contrario 
+\end{DoxyReturn}
+\hypertarget{classPeca_ac4cdffabf0200c1afdd295e61174c824}{
+\index{Peca@{Peca}!getLadoA@{getLadoA}}
+\index{getLadoA@{getLadoA}!Peca@{Peca}}
+\subsubsection[{getLadoA}]{\setlength{\rightskip}{0pt plus 5cm}int Peca::getLadoA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classPeca_ac4cdffabf0200c1afdd295e61174c824}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Valor inteiro do lado A da peca 
+\end{DoxyReturn}
+\hypertarget{classPeca_a3d5c0c01298e00552d525dad307c9438}{
+\index{Peca@{Peca}!getLadoB@{getLadoB}}
+\index{getLadoB@{getLadoB}!Peca@{Peca}}
+\subsubsection[{getLadoB}]{\setlength{\rightskip}{0pt plus 5cm}int Peca::getLadoB (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classPeca_a3d5c0c01298e00552d525dad307c9438}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Valor inteiro do lado B da peca 
+\end{DoxyReturn}
+\hypertarget{classPeca_aebeb13e1a53f511cf9a21b2505b66d34}{
+\index{Peca@{Peca}!getNome@{getNome}}
+\index{getNome@{getNome}!Peca@{Peca}}
+\subsubsection[{getNome}]{\setlength{\rightskip}{0pt plus 5cm}std::string Peca::getNome (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classPeca_aebeb13e1a53f511cf9a21b2505b66d34}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna o nome da peca 
+\end{DoxyReturn}
+\hypertarget{classPeca_a863feb25d9163cb47306f86fc7fe4273}{
+\index{Peca@{Peca}!instance@{instance}}
+\index{instance@{instance}!Peca@{Peca}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Peca} $\ast$ Peca::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classPeca_a863feb25d9163cb47306f86fc7fe4273}
+
+
+Instancia o singleton das pecas ou apenas retorna uma copia da peca indicada pelo parametro passado. 
+
+\begin{DoxyReturn}{Retorna}
+Copia de uma peca indicada pelo parametro passado 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/model/\hyperlink{peca_8hpp}{peca.hpp}\item 
+src/model/\hyperlink{peca_8cpp}{peca.cpp}\end{DoxyCompactItemize}

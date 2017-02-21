@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><title></title>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="search.css"/>
+<script type="text/javascript" src="search.js"></script>
+</head>
+<body class="SRPage">
+<div id="SRIndex">
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRResult" id="SR_resetar">
+ <div class="SREntry">
+  <a id="Item0" onkeydown="return searchResults.Nav(event,0)" onkeypress="return searchResults.Nav(event,0)" onkeyup="return searchResults.Nav(event,0)" class="SRSymbol" href="../classMesa.html#a2d23aa5398a03ea48bc098dca09742cc" target="_parent">resetar</a>
+  <span class="SRScope">Mesa</span>
+ </div>
+</div>
+<div class="SRResult" id="SR_resetarpontuacao">
+ <div class="SREntry">
+  <a id="Item1" onkeydown="return searchResults.Nav(event,1)" onkeypress="return searchResults.Nav(event,1)" onkeyup="return searchResults.Nav(event,1)" class="SRSymbol" href="../classJogador.html#a7ccde2c632166a00e6d91a7b1c7bf030" target="_parent">resetarPontuacao</a>
+  <span class="SRScope">Jogador</span>
+ </div>
+</div>
+<div class="SRResult" id="SR_resetarslots">
+ <div class="SREntry">
+  <a id="Item2" onkeydown="return searchResults.Nav(event,2)" onkeypress="return searchResults.Nav(event,2)" onkeyup="return searchResults.Nav(event,2)" class="SRSymbol" href="../classEngine.html#a2d85b68730cd1b731febc630d80ff3e0" target="_parent">resetarSlots</a>
+  <span class="SRScope">Engine</span>
+ </div>
+</div>
+<div class="SRResult" id="SR_run">
+ <div class="SREntry">
+  <a id="Item3" onkeydown="return searchResults.Nav(event,3)" onkeypress="return searchResults.Nav(event,3)" onkeyup="return searchResults.Nav(event,3)" class="SRSymbol" href="../classPartida.html#ac893ea8940f259ff8eec18129bbce3b8" target="_parent">run</a>
+  <span class="SRScope">Partida</span>
+ </div>
+</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+<script type="text/javascript"><!--
+document.getElementById("Loading").style.display="none";
+document.getElementById("NoMatches").style.display="none";
+var searchResults = new SearchResults("searchResults");
+searchResults.Search();
+--></script>
+</div>
+</body>
+</html>

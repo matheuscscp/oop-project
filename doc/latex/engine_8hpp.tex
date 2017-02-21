@@ -1,0 +1,155 @@
+\hypertarget{engine_8hpp}{
+\section{Referência do Arquivo include/view/engine.hpp}
+\label{engine_8hpp}\index{include/view/engine.hpp@{include/view/engine.hpp}}
+}
+
+
+Declaracao dos defines, classes e metodos da engine grafica.  
+
+
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include \char`\"{}../SDL/SDL\_\-ttf.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}./imagem.hpp\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../model/jogador.hpp\char`\"{}}\par
+Gráfico de dependência de inclusões para engine.hpp:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{engine_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{engine_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classSlotPeca}{SlotPeca}
+\begin{DoxyCompactList}\small\item\em Estrutura de uma posicao da mesa para se encaixar uma peca. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structsEstruturaSDL}{sEstruturaSDL}
+\begin{DoxyCompactList}\small\item\em Estrutura para armazenar os ponteiros da instancia da SDL. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structsTextoConfig}{sTextoConfig}
+\begin{DoxyCompactList}\small\item\em Estrutura para armazenar a formatacao padrao de um texto. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structsLogMsg}{sLogMsg}
+\begin{DoxyCompactList}\small\item\em Estrutura para armazenar os atributos das mensagens de log (mensagens explicativas ao usuario). \item\end{DoxyCompactList}\item 
+struct \hyperlink{structsLogo}{sLogo}
+\begin{DoxyCompactList}\small\item\em Estrutura para armazenar os atributos da tela de boas-\/vindas/ate-\/logo. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structsJogo}{sJogo}
+\begin{DoxyCompactList}\small\item\em Estrutura para armazenar as imagens do jogo de Domino. \item\end{DoxyCompactList}\item 
+class \hyperlink{classEngine}{Engine}
+\begin{DoxyCompactList}\small\item\em Definicoes da classe que lida com a interface do programa. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{engine_8hpp_ac92ca5ab87034a348decad7ee8d4bd1b}{
+\#define \hyperlink{engine_8hpp_ac92ca5ab87034a348decad7ee8d4bd1b}{FPS}~20}
+\label{engine_8hpp_ac92ca5ab87034a348decad7ee8d4bd1b}
+
+\begin{DoxyCompactList}\small\item\em Define o FPS (Frames Per Second) do jogo. \item\end{DoxyCompactList}\item 
+\hypertarget{engine_8hpp_a1f047ed2d3cab2eba708dec1be5f4a9b}{
+\#define \hyperlink{engine_8hpp_a1f047ed2d3cab2eba708dec1be5f4a9b}{TITULO\_\-JANELA}~\char`\"{}Dominó RAXASSAUM\char`\"{}}
+\label{engine_8hpp_a1f047ed2d3cab2eba708dec1be5f4a9b}
+
+\begin{DoxyCompactList}\small\item\em O titulo da janela. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{engine_8hpp_ad09af96b6de86bce6e25a272587756fd}{ESCALA\_\-TELA}~200
+\begin{DoxyCompactList}\small\item\em Define o fator (em pixels) de escala da janela, que sempre sera 4x3. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{engine_8hpp_a5f073c691de6f493786522d96edaeb2a}{LOG\_\-MSG\_\-DELAY}~3000
+\begin{DoxyCompactList}\small\item\em Define o tempo de espera em milissegundos para se mostrar um aviso. \item\end{DoxyCompactList}\item 
+\hypertarget{engine_8hpp_abb4fc560bc2e069893e26498f516809d}{
+\#define \hyperlink{engine_8hpp_abb4fc560bc2e069893e26498f516809d}{WELCOME}~0}
+\label{engine_8hpp_abb4fc560bc2e069893e26498f516809d}
+
+\begin{DoxyCompactList}\small\item\em Define um macro para a mensagem de boas-\/vindas para o metodo mostrarLogo (). \item\end{DoxyCompactList}\item 
+\hypertarget{engine_8hpp_a5135eb7c01f950e22097b47d86c8bcdf}{
+\#define \hyperlink{engine_8hpp_a5135eb7c01f950e22097b47d86c8bcdf}{GOODBYE}~1}
+\label{engine_8hpp_a5135eb7c01f950e22097b47d86c8bcdf}
+
+\begin{DoxyCompactList}\small\item\em Define um macro para a mensagem de ate-\/logo para o metodo mostrarLogo (). \item\end{DoxyCompactList}\item 
+\#define \hyperlink{engine_8hpp_a7f6a89e41474a6d561338c65dd4c2682}{engine}~Engine::instance ()
+\begin{DoxyCompactList}\small\item\em Instancia da engine. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{engine_8hpp_aae1ca748942959d543e81a5183ed093c}{tEstadoSlot} \{ \hyperlink{engine_8hpp_aae1ca748942959d543e81a5183ed093ca1a88641fcd39f2ed3e58a18526e97138}{VERTICAL} =  0, 
+\hyperlink{engine_8hpp_aae1ca748942959d543e81a5183ed093ca97de59a7d843f341ca17760c0903f68e}{VERTICAL\_\-INVERTIDA}, 
+\hyperlink{engine_8hpp_aae1ca748942959d543e81a5183ed093ca4dd51ad73508d6fc83a502966779e48e}{HORIZONTAL}, 
+\hyperlink{engine_8hpp_aae1ca748942959d543e81a5183ed093caa98bf42577f3bcef8e6e4633f2979f9f}{HORIZONTAL\_\-INVERTIDA}
+ \}
+\begin{DoxyCompactList}\small\item\em Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Declaracao dos defines, classes e metodos da engine grafica. 
+
+\subsection{Definições e macros}
+\hypertarget{engine_8hpp_a7f6a89e41474a6d561338c65dd4c2682}{
+\index{engine.hpp@{engine.hpp}!engine@{engine}}
+\index{engine@{engine}!engine.hpp@{engine.hpp}}
+\subsubsection[{engine}]{\setlength{\rightskip}{0pt plus 5cm}\#define engine~Engine::instance ()}}
+\label{engine_8hpp_a7f6a89e41474a6d561338c65dd4c2682}
+
+
+Instancia da engine. 
+
+Define um macro para simplificar a chamada ao singleton da engine \hypertarget{engine_8hpp_ad09af96b6de86bce6e25a272587756fd}{
+\index{engine.hpp@{engine.hpp}!ESCALA\_\-TELA@{ESCALA\_\-TELA}}
+\index{ESCALA\_\-TELA@{ESCALA\_\-TELA}!engine.hpp@{engine.hpp}}
+\subsubsection[{ESCALA\_\-TELA}]{\setlength{\rightskip}{0pt plus 5cm}\#define ESCALA\_\-TELA~200}}
+\label{engine_8hpp_ad09af96b6de86bce6e25a272587756fd}
+
+
+Define o fator (em pixels) de escala da janela, que sempre sera 4x3. 
+
+\begin{DoxyWarning}{Aviso}
+O valor padrao deste macro e 200. Outros valores podem bugar a tela. 
+\end{DoxyWarning}
+\hypertarget{engine_8hpp_a5f073c691de6f493786522d96edaeb2a}{
+\index{engine.hpp@{engine.hpp}!LOG\_\-MSG\_\-DELAY@{LOG\_\-MSG\_\-DELAY}}
+\index{LOG\_\-MSG\_\-DELAY@{LOG\_\-MSG\_\-DELAY}!engine.hpp@{engine.hpp}}
+\subsubsection[{LOG\_\-MSG\_\-DELAY}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOG\_\-MSG\_\-DELAY~3000}}
+\label{engine_8hpp_a5f073c691de6f493786522d96edaeb2a}
+
+
+Define o tempo de espera em milissegundos para se mostrar um aviso. 
+
+\begin{DoxyWarning}{Aviso}
+O valor padrao deste macro e 3000. 
+\end{DoxyWarning}
+
+
+\subsection{Enumerações}
+\hypertarget{engine_8hpp_aae1ca748942959d543e81a5183ed093c}{
+\index{engine.hpp@{engine.hpp}!tEstadoSlot@{tEstadoSlot}}
+\index{tEstadoSlot@{tEstadoSlot}!engine.hpp@{engine.hpp}}
+\subsubsection[{tEstadoSlot}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf tEstadoSlot}}}
+\label{engine_8hpp_aae1ca748942959d543e81a5183ed093c}
+
+
+Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada. 
+
+\begin{Desc}
+\item[Valores enumerados: ]\par
+\begin{description}
+\index{VERTICAL@{VERTICAL}!engine.hpp@{engine.hpp}}\index{engine.hpp@{engine.hpp}!VERTICAL@{VERTICAL}}\item[{\em 
+\hypertarget{engine_8hpp_aae1ca748942959d543e81a5183ed093ca1a88641fcd39f2ed3e58a18526e97138}{
+VERTICAL}
+\label{engine_8hpp_aae1ca748942959d543e81a5183ed093ca1a88641fcd39f2ed3e58a18526e97138}
+}]Posicao vertical (para cima). \index{VERTICAL\_\-INVERTIDA@{VERTICAL\_\-INVERTIDA}!engine.hpp@{engine.hpp}}\index{engine.hpp@{engine.hpp}!VERTICAL\_\-INVERTIDA@{VERTICAL\_\-INVERTIDA}}\item[{\em 
+\hypertarget{engine_8hpp_aae1ca748942959d543e81a5183ed093ca97de59a7d843f341ca17760c0903f68e}{
+VERTICAL\_\-INVERTIDA}
+\label{engine_8hpp_aae1ca748942959d543e81a5183ed093ca97de59a7d843f341ca17760c0903f68e}
+}]Posicao vertical invertida (para baixo). \index{HORIZONTAL@{HORIZONTAL}!engine.hpp@{engine.hpp}}\index{engine.hpp@{engine.hpp}!HORIZONTAL@{HORIZONTAL}}\item[{\em 
+\hypertarget{engine_8hpp_aae1ca748942959d543e81a5183ed093ca4dd51ad73508d6fc83a502966779e48e}{
+HORIZONTAL}
+\label{engine_8hpp_aae1ca748942959d543e81a5183ed093ca4dd51ad73508d6fc83a502966779e48e}
+}]Posicao horizontal (deitada). \index{HORIZONTAL\_\-INVERTIDA@{HORIZONTAL\_\-INVERTIDA}!engine.hpp@{engine.hpp}}\index{engine.hpp@{engine.hpp}!HORIZONTAL\_\-INVERTIDA@{HORIZONTAL\_\-INVERTIDA}}\item[{\em 
+\hypertarget{engine_8hpp_aae1ca748942959d543e81a5183ed093caa98bf42577f3bcef8e6e4633f2979f9f}{
+HORIZONTAL\_\-INVERTIDA}
+\label{engine_8hpp_aae1ca748942959d543e81a5183ed093caa98bf42577f3bcef8e6e4633f2979f9f}
+}]Posicao horizontal invertida (deitada invertida). \end{description}
+\end{Desc}
+

@@ -1,0 +1,121 @@
+\documentclass[a4paper]{book}
+\usepackage{a4wide}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{times}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Dominó RAXASSAUM }\\
+\vspace*{1cm}
+{\large Gerado por Doxygen 1.7.1}\\
+\vspace*{0.5cm}
+{\small Quarta, 18 de Janeiro de 2012 15:03:39}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+\chapter{Domino RAXASSAUM}
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{Índice dos Módulos}
+\input{modules}
+\chapter{Índice dos Componentes}
+\input{hierarchy}
+\chapter{Índice dos Componentes}
+\input{annotated}
+\chapter{Índice dos Arquivos}
+\input{files}
+\chapter{Módulos}
+\input{group__MOD__MAIN}
+\input{group__MOD__JOGADOR}
+\input{group__MOD__MESA}
+\input{group__MOD__PECA}
+\input{group__MOD__ENGINE}
+\input{group__MOD__IMAGEM}
+\input{group__MOD__VIEW}
+\input{group__MOD__PARTIDA}
+\chapter{Classes}
+\input{classBurrice}
+\input{classEngine}
+\input{classExcecaoEngineCrash}
+\input{classImagem}
+\input{classInteligencia}
+\input{classInteligenciaNivel1}
+\input{classInteligenciaNivel2}
+\input{classJogador}
+\input{classMesa}
+\input{classPartida}
+\input{classPeca}
+\input{classRegiao}
+\input{classRegiao1Comeco}
+\input{classRegiao1Fim}
+\input{classRegiao2Comeco}
+\input{classRegiao2Fim}
+\input{classRegiao3Comeco}
+\input{classRegiao3Fim}
+\input{classRegiao4Comeco}
+\input{classRegiao4Fim}
+\input{classRegiao5Comeco}
+\input{classRegiao5Fim}
+\input{structsEstruturaSDL}
+\input{structsJogada}
+\input{structsJogo}
+\input{structsLogMsg}
+\input{structsLogo}
+\input{classSlotPeca}
+\input{structsTextoConfig}
+\input{classView}
+\chapter{Arquivos}
+\input{partida_8hpp}
+\input{jogador_8hpp}
+\input{mesa_8hpp}
+\input{peca_8hpp}
+\input{engine_8hpp}
+\input{imagem_8hpp}
+\input{view_8hpp}
+\input{main_8cpp}
+\input{partida_8cpp}
+\input{jogador_8cpp}
+\input{mesa_8cpp}
+\input{peca_8cpp}
+\input{engine_8cpp}
+\input{imagem_8cpp}
+\input{view_8cpp}
+\printindex
+\end{document}

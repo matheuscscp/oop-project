@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dominó RAXASSAUM: Referência da Estrutura sLogMsg</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;Componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;Componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;Classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Atributos Públicos</a>  </div>
+  <div class="headertitle">
+<h1>Referência da Estrutura sLogMsg</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="sLogMsg" -->
+<p>Estrutura para armazenar os atributos das mensagens de log (mensagens explicativas ao usuario).  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="engine_8hpp_source.html">engine.hpp</a>&gt;</code></p>
+
+<p><a href="structsLogMsg-members.html">Lista de todos os Membros.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f4f40ec9f2fb15c4e45e755a42e3f45"></a><!-- doxytag: member="sLogMsg::mensagem" ref="a9f4f40ec9f2fb15c4e45e755a42e3f45" args="" -->
+std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsLogMsg.html#a9f4f40ec9f2fb15c4e45e755a42e3f45">mensagem</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">String da ultima mensagem de log. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a205b348f96e71edfb700b67a371c04e2"></a><!-- doxytag: member="sLogMsg::p_imagem" ref="a205b348f96e71edfb700b67a371c04e2" args="" -->
+SDL_Surface *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsLogMsg.html#a205b348f96e71edfb700b67a371c04e2">p_imagem</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ponteiro para a supercifie da imagem do texto. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a357fe30492e0ab4f595eda19c0b17239"></a><!-- doxytag: member="sLogMsg::posicao" ref="a357fe30492e0ab4f595eda19c0b17239" args="" -->
+SDL_Rect&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsLogMsg.html#a357fe30492e0ab4f595eda19c0b17239">posicao</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retangulo para posicionar a imagem na tela. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c546eb0dda8fb90151c352f598ae0f9"></a><!-- doxytag: member="sLogMsg::atraso" ref="a2c546eb0dda8fb90151c352f598ae0f9" args="" -->
+unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsLogMsg.html#a2c546eb0dda8fb90151c352f598ae0f9">atraso</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flag para controlar o tempo sem acoes apos uma mensagem de log entrar na fila. <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição Detalhada</h2>
+<p>Estrutura para armazenar os atributos das mensagens de log (mensagens explicativas ao usuario). </p>
+<hr/>A documentação para esta estrutura foi gerada a partir do seguinte arquivo:<ul>
+<li>include/view/<a class="el" href="engine_8hpp_source.html">engine.hpp</a></li>
+</ul>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Definições e Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Quarta, 18 de Janeiro de 2012 15:03:40 para Dominó RAXASSAUM por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

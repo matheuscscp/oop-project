@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dominó RAXASSAUM: Código-Fonte de include/view/imagem.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>include/view/imagem.hpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="imagem_8hpp.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef IMAGEM_HPP</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define IMAGEM_HPP</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;../SDL/SDL_image.h&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00018"></a><a class="code" href="classExcecaoEngineCrash.html">00018</a> <span class="keyword">class </span><a class="code" href="classExcecaoEngineCrash.html" title="Excecao para um algum erro critico (o programa sera encerrado imediatamente).">ExcecaoEngineCrash</a>
+<a name="l00019"></a>00019 {
+<a name="l00020"></a>00020         <span class="keyword">public</span>:
+<a name="l00022"></a><a class="code" href="classExcecaoEngineCrash.html#a54792cee90769059065a7144d7ed4d26">00022</a>                 std::string <a class="code" href="classExcecaoEngineCrash.html#a54792cee90769059065a7144d7ed4d26" title="String que diz qual foi o erro ocorrido.">erro</a>;
+<a name="l00023"></a>00023                 
+<a name="l00026"></a><a class="code" href="classExcecaoEngineCrash.html#a60622b0f6bc17efcde24206ed705eb98">00026</a>                 <a class="code" href="classExcecaoEngineCrash.html#a60622b0f6bc17efcde24206ed705eb98" title="Construtor para armazenar o erro ocorrido.">ExcecaoEngineCrash</a> (std::string <a class="code" href="classExcecaoEngineCrash.html#a54792cee90769059065a7144d7ed4d26" title="String que diz qual foi o erro ocorrido.">erro</a>) <span class="keywordflow">throw</span> () { this-&gt;<a class="code" href="classExcecaoEngineCrash.html#a54792cee90769059065a7144d7ed4d26" title="String que diz qual foi o erro ocorrido.">erro</a> = <a class="code" href="classExcecaoEngineCrash.html#a54792cee90769059065a7144d7ed4d26" title="String que diz qual foi o erro ocorrido.">erro</a>; }
+<a name="l00027"></a>00027 };
+<a name="l00028"></a>00028 
+<a name="l00032"></a><a class="code" href="classImagem.html">00032</a> <span class="keyword">class </span><a class="code" href="classImagem.html" title="Definicoes da classe que lida com imagens.">Imagem</a>
+<a name="l00033"></a>00033 {
+<a name="l00034"></a>00034         <span class="keyword">private</span>:
+<a name="l00035"></a>00035                 
+<a name="l00037"></a>00037                 SDL_Surface*    p_tela;
+<a name="l00038"></a>00038                 
+<a name="l00040"></a>00040                 SDL_Surface*    p_imagem;
+<a name="l00041"></a>00041                 
+<a name="l00043"></a>00043                 <span class="keywordtype">int</span>             largura;
+<a name="l00044"></a>00044                 
+<a name="l00046"></a>00046                 <span class="keywordtype">int</span>             altura;
+<a name="l00047"></a>00047                 
+<a name="l00048"></a>00048         <span class="keyword">public</span>:
+<a name="l00049"></a>00049                 
+<a name="l00056"></a>00056                 <a class="code" href="classImagem.html#a838fb6966bd204f60f5e527a63e6059c" title="Construtor.">Imagem</a> (SDL_Surface* p_tela, std::string arquivo, <span class="keywordtype">int</span> linhas, <span class="keywordtype">int</span> colunas) <span class="keywordflow">throw</span> (<a class="code" href="classExcecaoEngineCrash.html" title="Excecao para um algum erro critico (o programa sera encerrado imediatamente).">ExcecaoEngineCrash</a>);
+<a name="l00057"></a>00057                 
+<a name="l00059"></a><a class="code" href="classImagem.html#ab0c3a402ec623a6050ad105332d6a40a">00059</a>                 <a class="code" href="classImagem.html#ab0c3a402ec623a6050ad105332d6a40a" title="Destrutor.">~Imagem</a> (<span class="keywordtype">void</span>) throw () { SDL_FreeSurface (this-&gt;p_imagem); }
+<a name="l00060"></a>00060                 
+<a name="l00066"></a>00066                 <span class="keywordtype">void</span> <a class="code" href="classImagem.html#a7fa8fe7f059c1b7e08bbf0f89005b172" title="Imprime uma celula da matriz dividida da imagem.">imprimir</a> (<span class="keywordtype">int</span> linha, <span class="keywordtype">int</span> coluna, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) <span class="keywordflow">throw</span> ();
+<a name="l00067"></a>00067                 
+<a name="l00070"></a><a class="code" href="classImagem.html#a80e4d0f649aa3d1e212b572177f6d5ec">00070</a>                 <span class="keywordtype">int</span> <a class="code" href="classImagem.html#a80e4d0f649aa3d1e212b572177f6d5ec" title="Metodo de acesso para a largura de uma celula.">getLargura</a> (<span class="keywordtype">void</span>) throw () { <span class="keywordflow">return</span> (this-&gt;largura); }
+<a name="l00071"></a>00071                 
+<a name="l00074"></a><a class="code" href="classImagem.html#a2d2c465a25a6413d49f7943d59ad96e1">00074</a>                 <span class="keywordtype">int</span> <a class="code" href="classImagem.html#a2d2c465a25a6413d49f7943d59ad96e1" title="Metodo de acesso para a altura de uma celula.">getAltura</a> (<span class="keywordtype">void</span>) throw () { <span class="keywordflow">return</span> (this-&gt;altura); }
+<a name="l00075"></a>00075 };
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Definições e Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Quarta, 18 de Janeiro de 2012 15:03:39 para Dominó RAXASSAUM por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,101 @@
+\hypertarget{classInteligenciaNivel1}{
+\section{Referência da Classe InteligenciaNivel1}
+\label{classInteligenciaNivel1}\index{InteligenciaNivel1@{InteligenciaNivel1}}
+}
+
+
+Implementacao do primeiro nivel de inteligencia artificial possivel para o jogo de Domino, vulgo POPS!!  
+
+
+
+
+{\ttfamily \#include $<$jogador.hpp$>$}
+
+
+
+Diagrama de Hierarquia para InteligenciaNivel1:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classInteligenciaNivel1__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para InteligenciaNivel1:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classInteligenciaNivel1__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classInteligenciaNivel1_a8fedd9a33f64d1f24133e92b14aa95e9}{
+\hyperlink{classInteligenciaNivel1_a8fedd9a33f64d1f24133e92b14aa95e9}{InteligenciaNivel1} ()}
+\label{classInteligenciaNivel1_a8fedd9a33f64d1f24133e92b14aa95e9}
+
+\begin{DoxyCompactList}\small\item\em Construtor. \item\end{DoxyCompactList}\item 
+int \hyperlink{classInteligenciaNivel1_adef4d79445d1b1e5537cf386923d2a4e}{jogarPrimeiraPeca} (\hyperlink{classJogador}{Jogador} $\ast$jogador)
+\begin{DoxyCompactList}\small\item\em Comeca com a primeira bucha da mao do jogador, ou com a primeira peca caso nao hajam buchas. \item\end{DoxyCompactList}\item 
+\hyperlink{structsJogada}{sJogada} \hyperlink{classInteligenciaNivel1_a36f443c99f33ab5689fd4093c2d6eb2d}{fazerJogada} (\hyperlink{classJogador}{Jogador} $\ast$jogador)
+\begin{DoxyCompactList}\small\item\em Encaixa a primeira tentativa POPS que der certo. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Implementacao do primeiro nivel de inteligencia artificial possivel para o jogo de Domino, vulgo POPS!! 
+
+\subsection{Métodos}
+\hypertarget{classInteligenciaNivel1_a36f443c99f33ab5689fd4093c2d6eb2d}{
+\index{InteligenciaNivel1@{InteligenciaNivel1}!fazerJogada@{fazerJogada}}
+\index{fazerJogada@{fazerJogada}!InteligenciaNivel1@{InteligenciaNivel1}}
+\subsubsection[{fazerJogada}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sJogada} InteligenciaNivel1::fazerJogada (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{ jogador}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classInteligenciaNivel1_a36f443c99f33ab5689fd4093c2d6eb2d}
+
+
+Encaixa a primeira tentativa POPS que der certo. 
+
+Ordem das tentativas (uma peca depois da outra): pecaLadoB com fimMesa pecaLadoB com comecoMesa pecaLadoA com fimMesa pecaLadoA com comecoMesa 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogador}]Ponteiro para o jogador que esta executando a jogada \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Jogada feita pela inteligencia artificial deste jogador 
+\end{DoxyReturn}
+
+
+Implementa \hyperlink{classInteligencia_acb6757c0a14fa9d437d99a777af981ba}{Inteligencia}.
+
+\hypertarget{classInteligenciaNivel1_adef4d79445d1b1e5537cf386923d2a4e}{
+\index{InteligenciaNivel1@{InteligenciaNivel1}!jogarPrimeiraPeca@{jogarPrimeiraPeca}}
+\index{jogarPrimeiraPeca@{jogarPrimeiraPeca}!InteligenciaNivel1@{InteligenciaNivel1}}
+\subsubsection[{jogarPrimeiraPeca}]{\setlength{\rightskip}{0pt plus 5cm}int InteligenciaNivel1::jogarPrimeiraPeca (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{ jogador}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classInteligenciaNivel1_adef4d79445d1b1e5537cf386923d2a4e}
+
+
+Comeca com a primeira bucha da mao do jogador, ou com a primeira peca caso nao hajam buchas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogador}]Ponteiro para o jogador que esta executando a jogada \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Indice da peca que foi jogada 
+\end{DoxyReturn}
+
+
+Implementa \hyperlink{classInteligencia_ad66cee21015269f35772042f9fa2b97c}{Inteligencia}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/model/\hyperlink{jogador_8hpp}{jogador.hpp}\item 
+src/model/\hyperlink{jogador_8cpp}{jogador.cpp}\end{DoxyCompactItemize}

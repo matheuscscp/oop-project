@@ -1,0 +1,62 @@
+\hypertarget{classRegiao}{
+\section{Referência da Classe Regiao}
+\label{classRegiao}\index{Regiao@{Regiao}}
+}
+
+
+Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa, seu estado e sua posicao na tela.  
+
+
+
+
+{\ttfamily \#include $<$view.hpp$>$}
+
+
+
+Diagrama de Hierarquia para Regiao:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classRegiao__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classRegiao}{Regiao} $\ast$ \hyperlink{classRegiao_a933b73213efc9221a5dd009f76bee512}{setEstadoXY} (const \hyperlink{structsJogada}{sJogada} \&jogada, const \hyperlink{classSlotPeca}{SlotPeca} \&slot\_\-mesa)=0
+\begin{DoxyCompactList}\small\item\em Metodo polimorfico abstrato que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixada na mesa. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa, seu estado e sua posicao na tela. 
+
+\subsection{Métodos}
+\hypertarget{classRegiao_a933b73213efc9221a5dd009f76bee512}{
+\index{Regiao@{Regiao}!setEstadoXY@{setEstadoXY}}
+\index{setEstadoXY@{setEstadoXY}!Regiao@{Regiao}}
+\subsubsection[{setEstadoXY}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Regiao}$\ast$ Regiao::setEstadoXY (
+\begin{DoxyParamCaption}
+\item[{const {\bf sJogada} \&}]{ jogada, }
+\item[{const {\bf SlotPeca} \&}]{ slot\_\-mesa}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classRegiao_a933b73213efc9221a5dd009f76bee512}
+
+
+Metodo polimorfico abstrato que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixada na mesa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogada}]Referencia para uma jogada constante que determina os outros parametros \item[{\em slot\_\-mesa}]Referencia do slot da ponta da mesa cuja jogada foi feita \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para a regiao em que a nova peca estara encaixada 
+\end{DoxyReturn}
+
+
+Implementado por \hyperlink{classRegiao1Comeco_afc4135c2d9913c55d620241a3f780268}{Regiao1Comeco}, \hyperlink{classRegiao2Comeco_aef5c4a25b00a87f2805c69451fea103d}{Regiao2Comeco}, \hyperlink{classRegiao3Comeco_a6484c63613843819aac4f486ca8a5ac4}{Regiao3Comeco}, \hyperlink{classRegiao4Comeco_a81b413f8c719c5f10b60d2a046a8cebb}{Regiao4Comeco}, \hyperlink{classRegiao5Comeco_ab0e0ddb0608efdc462090ced3d8fdac0}{Regiao5Comeco}, \hyperlink{classRegiao1Fim_aa1a0145f9e03f4c934b4216dc06dae1b}{Regiao1Fim}, \hyperlink{classRegiao2Fim_a8aebf23ca0e1f36a3bfc15073e0b4485}{Regiao2Fim}, \hyperlink{classRegiao3Fim_acfbff7cf6d2848248d827efa6bf61663}{Regiao3Fim}, \hyperlink{classRegiao4Fim_a9292ee02c32056919d94d2b9d2c4edbb}{Regiao4Fim} e \hyperlink{classRegiao5Fim_a25df09bde149c0479f4c02264885299f}{Regiao5Fim}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+include/view/\hyperlink{view_8hpp}{view.hpp}\end{DoxyCompactItemize}

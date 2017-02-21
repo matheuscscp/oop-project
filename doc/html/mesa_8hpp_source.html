@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dominó RAXASSAUM: Código-Fonte de include/model/mesa.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>include/model/mesa.hpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="mesa_8hpp.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef MESA_HPP</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define MESA_HPP</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="comment">/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span>
+<a name="l00014"></a>00014 <span class="comment"> *                                      INCLUDES E DEFINES</span>
+<a name="l00015"></a>00015 <span class="comment"> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;list&gt;</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="peca_8hpp.html" title="Declaracao dos defines, classes e metodos relacionadas a uma peca do jogo de Domino.">./peca.hpp</a>&quot;</span>
+<a name="l00020"></a>00020 
+<a name="l00024"></a><a class="code" href="mesa_8hpp.html#ac0baa18f0842577508309f3083168572">00024</a> <span class="preprocessor">#define mesa    Mesa::instance ()</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span>
+<a name="l00027"></a><a class="code" href="structsJogada.html">00027</a> <span class="keyword">struct </span><a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>
+<a name="l00028"></a>00028 {
+<a name="l00030"></a><a class="code" href="structsJogada.html#a4d4f6b668fe49e4549d4706966a86c05">00030</a>         <span class="keywordtype">int</span>     <a class="code" href="structsJogada.html#a4d4f6b668fe49e4549d4706966a86c05" title="Guarda o indice da peca movida.">indice_peca</a>;
+<a name="l00031"></a>00031         
+<a name="l00033"></a><a class="code" href="structsJogada.html#a800ff28211e3d6c2247539f4a9017767">00033</a>         <span class="keywordtype">char</span>    <a class="code" href="structsJogada.html#a800ff28211e3d6c2247539f4a9017767" title="Char que indica qual lado encaixa da nova peca.">lado_peca</a>;
+<a name="l00034"></a>00034         
+<a name="l00036"></a><a class="code" href="structsJogada.html#a13134fc4a30976d3598673ba6f37a733">00036</a>         <span class="keywordtype">int</span>     <a class="code" href="structsJogada.html#a13134fc4a30976d3598673ba6f37a733" title="Guarda o indice da peca na ponta da mesa.">indice_mesa</a>;
+<a name="l00037"></a>00037         
+<a name="l00039"></a><a class="code" href="structsJogada.html#aeb268368bd8aee87d3ee84b50790b971">00039</a>         <span class="keywordtype">char</span>    <a class="code" href="structsJogada.html#aeb268368bd8aee87d3ee84b50790b971" title="Char que indica a ponta (&amp;#39;C&amp;#39; para comeco, &amp;#39;F&amp;#39; para fim) em que jogada esta sendo feit...">ponta</a>;
+<a name="l00040"></a>00040 };
+<a name="l00041"></a>00041 
+<a name="l00043"></a><a class="code" href="classMesa.html">00043</a> <span class="keyword">class </span><a class="code" href="classMesa.html" title="Representa a mesa do jogo.">Mesa</a>
+<a name="l00044"></a>00044 {
+<a name="l00045"></a>00045         <span class="keyword">private</span>:
+<a name="l00046"></a>00046                 
+<a name="l00048"></a>00048                 <span class="keyword">static</span> <a class="code" href="classMesa.html" title="Representa a mesa do jogo.">Mesa</a>*    _instance;
+<a name="l00049"></a>00049                 
+<a name="l00051"></a>00051                 std::list&lt;int&gt;  indice_pecas;
+<a name="l00052"></a>00052                 
+<a name="l00054"></a>00054                 <span class="keywordtype">int</span>             lado_comeco;
+<a name="l00055"></a>00055                 
+<a name="l00057"></a>00057                 <span class="keywordtype">int</span>             lado_fim;
+<a name="l00058"></a>00058                 
+<a name="l00060"></a>00060                 <a class="code" href="classMesa.html" title="Representa a mesa do jogo.">Mesa</a> () <span class="keywordflow">throw</span> () {}
+<a name="l00061"></a>00061                 
+<a name="l00063"></a>00063                 ~<a class="code" href="classMesa.html" title="Representa a mesa do jogo.">Mesa</a> () <span class="keywordflow">throw</span> () {}
+<a name="l00064"></a>00064                 
+<a name="l00065"></a>00065         <span class="keyword">public</span>:
+<a name="l00066"></a>00066                 
+<a name="l00069"></a>00069                 <span class="keyword">static</span> <a class="code" href="classMesa.html" title="Representa a mesa do jogo.">Mesa</a>* <a class="code" href="classMesa.html#afeb7646c49b1269a0c5e5a605b72c21b" title="Instancia ou apenas retorna o ponteiro da instancia do singleton da mesa.">instance</a> () <span class="keywordflow">throw</span> ();
+<a name="l00070"></a>00070                 
+<a name="l00072"></a>00072                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classMesa.html#a78e2890157e5be6829a72d1abaa418ce" title="Destroi a instancia do singleton da mesa.">delete_instance</a> () <span class="keywordflow">throw</span> ();
+<a name="l00073"></a>00073                 
+<a name="l00075"></a><a class="code" href="classMesa.html#a2d23aa5398a03ea48bc098dca09742cc">00075</a>                 <span class="keywordtype">void</span> <a class="code" href="classMesa.html#a2d23aa5398a03ea48bc098dca09742cc" title="Esvazia os indices.">resetar</a> () throw () { this-&gt;indice_pecas.clear (); }
+<a name="l00076"></a>00076                 
+<a name="l00079"></a>00079                 <span class="keywordtype">void</span> <a class="code" href="classMesa.html#a0fc48607f94d1b750d2f83533b8416e7" title="Insere uma peca no centro da mesa.">inserePrimeiraPeca</a> (<span class="keywordtype">int</span> indice_peca) <span class="keywordflow">throw</span> ();
+<a name="l00080"></a>00080                 
+<a name="l00083"></a>00083                 <span class="keywordtype">void</span> <a class="code" href="classMesa.html#a17e202d50f0f113700169e93d2a6c140" title="Insere uma peca no comeco da mesa.">insereComeco</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada) <span class="keywordflow">throw</span> ();
+<a name="l00084"></a>00084                 
+<a name="l00087"></a><a class="code" href="classMesa.html#a5d5a11c6c1b799f037976685b382bd02">00087</a>                 <span class="keywordtype">int</span> <a class="code" href="classMesa.html#a5d5a11c6c1b799f037976685b382bd02" title="Metodo de acesso.">getLadoComeco</a> () throw () { <span class="keywordflow">return</span> this-&gt;lado_comeco; }
+<a name="l00088"></a>00088                 
+<a name="l00091"></a><a class="code" href="classMesa.html#a27977e765ff8e91c684734f68949cd5f">00091</a>                 <span class="keywordtype">int</span> <a class="code" href="classMesa.html#a27977e765ff8e91c684734f68949cd5f" title="Retorna o indice da peca na ponta de cima da mesa.">getIndiceComeco</a> () throw () { <span class="keywordflow">return</span> this-&gt;indice_pecas.front (); }
+<a name="l00092"></a>00092                 
+<a name="l00095"></a>00095                 <span class="keywordtype">void</span> <a class="code" href="classMesa.html#a3630fabd06b3701cef850b1528143d1a" title="Insere uma peca no fim da mesa.">insereFim</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada) <span class="keywordflow">throw</span> ();
+<a name="l00096"></a>00096                 
+<a name="l00099"></a><a class="code" href="classMesa.html#a9c1e133003090c88d1d2c6672d67f3d8">00099</a>                 <span class="keywordtype">int</span> <a class="code" href="classMesa.html#a9c1e133003090c88d1d2c6672d67f3d8" title="Metodo de acesso.">getLadoFim</a> () throw () { <span class="keywordflow">return</span> this-&gt;lado_fim; }
+<a name="l00100"></a>00100                 
+<a name="l00103"></a><a class="code" href="classMesa.html#ad86df6da9b91e2a5271880dd12002981">00103</a>                 <span class="keywordtype">int</span> <a class="code" href="classMesa.html#ad86df6da9b91e2a5271880dd12002981" title="Retorna o indice da peca na ponta de baixo da mesa.">getIndiceFim</a> () throw () { <span class="keywordflow">return</span> this-&gt;indice_pecas.back (); }
+<a name="l00104"></a>00104                 
+<a name="l00107"></a><a class="code" href="classMesa.html#a362745924772f384bb8fc7039a6bb6b7">00107</a>                 std::list&lt;int&gt;&amp; <a class="code" href="classMesa.html#a362745924772f384bb8fc7039a6bb6b7" title="Retorna uma referencia para a lista de indices de pecas da mesa.">getIndicePecas</a> () throw () { <span class="keywordflow">return</span> this-&gt;indice_pecas; }
+<a name="l00108"></a>00108 };
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 <span class="comment">// instancia os membros static do singleton da mesa</span>
+<a name="l00111"></a>00111 <span class="preprocessor">#ifdef MESA_SERVER</span>
+<a name="l00112"></a>00112 <span class="preprocessor"></span>        <a class="code" href="classMesa.html" title="Representa a mesa do jogo.">Mesa</a>* Mesa::_instance = NULL;
+<a name="l00113"></a>00113 <span class="preprocessor">#endif</span>
+<a name="l00114"></a>00114 <span class="preprocessor"></span>
+<a name="l00115"></a>00115 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Definições e Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Quarta, 18 de Janeiro de 2012 15:03:39 para Dominó RAXASSAUM por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

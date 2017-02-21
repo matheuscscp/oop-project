@@ -1,0 +1,48 @@
+\hypertarget{structsJogo}{
+\section{Referência da Estrutura sJogo}
+\label{structsJogo}\index{sJogo@{sJogo}}
+}
+
+
+Estrutura para armazenar as imagens do jogo de Domino.  
+
+
+
+
+{\ttfamily \#include $<$engine.hpp$>$}
+
+
+
+Diagrama de colaboração para sJogo:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{structsJogo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structsJogo_a14eba75e0169544f9ae6ad594c50cfbb}{
+\hyperlink{classImagem}{Imagem} $\ast$ \hyperlink{structsJogo_a14eba75e0169544f9ae6ad594c50cfbb}{p\_\-imagem\_\-pecas}}
+\label{structsJogo_a14eba75e0169544f9ae6ad594c50cfbb}
+
+\begin{DoxyCompactList}\small\item\em Ponteiro para as imagens de todas as pecas de Domino. \item\end{DoxyCompactList}\item 
+\hypertarget{structsJogo_a59d3593b054f3fcca11707fb45e82929}{
+\hyperlink{classImagem}{Imagem} $\ast$ \hyperlink{structsJogo_a59d3593b054f3fcca11707fb45e82929}{p\_\-imagem\_\-maos}}
+\label{structsJogo_a59d3593b054f3fcca11707fb45e82929}
+
+\begin{DoxyCompactList}\small\item\em Ponteiro para as imagens das pecas nas maos dos oponentes. \item\end{DoxyCompactList}\item 
+\hypertarget{structsJogo_ac5497fb8f57d71436f53b6ce45748b3b}{
+std::list$<$ \hyperlink{classSlotPeca}{SlotPeca} $>$ \hyperlink{structsJogo_ac5497fb8f57d71436f53b6ce45748b3b}{slot\_\-pecas}}
+\label{structsJogo_ac5497fb8f57d71436f53b6ce45748b3b}
+
+\begin{DoxyCompactList}\small\item\em Lista de slots que estao alocados para as pecas em determinado instante. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Estrutura para armazenar as imagens do jogo de Domino. 
+
+A documentação para esta estrutura foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+include/view/\hyperlink{engine_8hpp}{engine.hpp}\end{DoxyCompactItemize}

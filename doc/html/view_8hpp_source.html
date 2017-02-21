@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dominó RAXASSAUM: Código-Fonte de include/view/view.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>include/view/view.hpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="view_8hpp.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef VIEW_HPP</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define VIEW_HPP</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="engine_8hpp.html" title="Declaracao dos defines, classes e metodos da engine grafica.">./engine.hpp</a>&quot;</span>
+<a name="l00014"></a>00014 
+<a name="l00018"></a><a class="code" href="view_8hpp.html#ae40e8e5f8a98ea4b0b17a4007fbffa05">00018</a> <span class="preprocessor">#define view    View::instance ()</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span>
+<a name="l00021"></a><a class="code" href="classRegiao.html">00021</a> <span class="keyword">class </span><a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023         <span class="keyword">public</span>:
+<a name="l00024"></a>00024                 
+<a name="l00029"></a>00029                 <span class="keyword">virtual</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao.html#a933b73213efc9221a5dd009f76bee512" title="Metodo polimorfico abstrato que deve encontrar a regiao, o estado e a posicao da nova peca que esta s...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa) = 0;
+<a name="l00030"></a>00030 };
+<a name="l00031"></a>00031 
+<a name="l00033"></a><a class="code" href="classRegiao1Comeco.html">00033</a> <span class="keyword">class </span><a class="code" href="classRegiao1Comeco.html" title="Especializacao de uma regiao para a regiao 1 do comeco da mesa.">Regiao1Comeco</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035         <span class="keyword">private</span>:
+<a name="l00036"></a>00036                 
+<a name="l00044"></a>00044                 <span class="keywordtype">void</span> mesaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00045"></a>00045                 
+<a name="l00053"></a>00053                 <span class="keywordtype">void</span> mesaNaoBuchaNovaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y, <span class="keywordtype">int</span> largura_restante);
+<a name="l00054"></a>00054                 
+<a name="l00055"></a>00055         <span class="keyword">public</span>:
+<a name="l00056"></a>00056                 
+<a name="l00061"></a>00061                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao1Comeco.html#afc4135c2d9913c55d620241a3f780268" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00062"></a>00062 };
+<a name="l00063"></a>00063 
+<a name="l00065"></a><a class="code" href="classRegiao2Comeco.html">00065</a> <span class="keyword">class </span><a class="code" href="classRegiao2Comeco.html" title="Especializacao de uma regiao para a regiao 2 do comeco da mesa.">Regiao2Comeco</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00066"></a>00066 {
+<a name="l00067"></a>00067         <span class="keyword">private</span>:
+<a name="l00068"></a>00068                 
+<a name="l00076"></a>00076                 <span class="keywordtype">void</span> mesaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00077"></a>00077                 
+<a name="l00078"></a>00078         <span class="keyword">public</span>:
+<a name="l00079"></a>00079                 
+<a name="l00084"></a>00084                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao2Comeco.html#aef5c4a25b00a87f2805c69451fea103d" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00085"></a>00085 };
+<a name="l00086"></a>00086 
+<a name="l00088"></a><a class="code" href="classRegiao3Comeco.html">00088</a> <span class="keyword">class </span><a class="code" href="classRegiao3Comeco.html" title="Especializacao de uma regiao para a regiao 3 do comeco da mesa.">Regiao3Comeco</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00089"></a>00089 {
+<a name="l00090"></a>00090         <span class="keyword">private</span>:
+<a name="l00091"></a>00091                 
+<a name="l00099"></a>00099                 <span class="keywordtype">void</span> mesaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00100"></a>00100                 
+<a name="l00108"></a>00108                 <span class="keywordtype">void</span> mesaNaoBuchaNovaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y, <span class="keywordtype">int</span> largura_restante);
+<a name="l00109"></a>00109                 
+<a name="l00117"></a>00117                 <span class="keywordtype">void</span> mesaBuchaNaoHorizontal (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00118"></a>00118                 
+<a name="l00119"></a>00119         <span class="keyword">public</span>:
+<a name="l00120"></a>00120                 
+<a name="l00125"></a>00125                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao3Comeco.html#a6484c63613843819aac4f486ca8a5ac4" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00126"></a>00126 };
+<a name="l00127"></a>00127 
+<a name="l00129"></a><a class="code" href="classRegiao4Comeco.html">00129</a> <span class="keyword">class </span><a class="code" href="classRegiao4Comeco.html" title="Especializacao de uma regiao para a regiao 4 do comeco da mesa.">Regiao4Comeco</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00130"></a>00130 {
+<a name="l00131"></a>00131         <span class="keyword">private</span>:
+<a name="l00132"></a>00132                 
+<a name="l00140"></a>00140                 <span class="keywordtype">void</span> mesaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00141"></a>00141                 
+<a name="l00142"></a>00142         <span class="keyword">public</span>:
+<a name="l00143"></a>00143                 
+<a name="l00148"></a>00148                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao4Comeco.html#a81b413f8c719c5f10b60d2a046a8cebb" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00149"></a>00149 };
+<a name="l00150"></a>00150 
+<a name="l00152"></a><a class="code" href="classRegiao5Comeco.html">00152</a> <span class="keyword">class </span><a class="code" href="classRegiao5Comeco.html" title="Especializacao de uma regiao para a regiao 5 do comeco da mesa.">Regiao5Comeco</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00153"></a>00153 {
+<a name="l00154"></a>00154         <span class="keyword">public</span>:
+<a name="l00155"></a>00155                 
+<a name="l00160"></a>00160                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao5Comeco.html#ab0e0ddb0608efdc462090ced3d8fdac0" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00161"></a>00161 };
+<a name="l00162"></a>00162 
+<a name="l00164"></a><a class="code" href="classRegiao1Fim.html">00164</a> <span class="keyword">class </span><a class="code" href="classRegiao1Fim.html" title="Especializacao de uma regiao para a regiao 1 do comeco da mesa.">Regiao1Fim</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00165"></a>00165 {
+<a name="l00166"></a>00166         <span class="keyword">private</span>:
+<a name="l00167"></a>00167                 
+<a name="l00175"></a>00175                 <span class="keywordtype">void</span> mesaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00176"></a>00176                 
+<a name="l00184"></a>00184                 <span class="keywordtype">void</span> mesaNaoBuchaNovaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y, <span class="keywordtype">int</span> largura_restante);
+<a name="l00185"></a>00185                 
+<a name="l00186"></a>00186         <span class="keyword">public</span>:
+<a name="l00187"></a>00187                 
+<a name="l00192"></a>00192                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao1Fim.html#aa1a0145f9e03f4c934b4216dc06dae1b" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00193"></a>00193 };
+<a name="l00194"></a>00194 
+<a name="l00196"></a><a class="code" href="classRegiao2Fim.html">00196</a> <span class="keyword">class </span><a class="code" href="classRegiao2Fim.html" title="Especializacao de uma regiao para a regiao 2 do comeco da mesa.">Regiao2Fim</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00197"></a>00197 {
+<a name="l00198"></a>00198         <span class="keyword">private</span>:
+<a name="l00199"></a>00199                 
+<a name="l00207"></a>00207                 <span class="keywordtype">void</span> mesaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00208"></a>00208                 
+<a name="l00209"></a>00209         <span class="keyword">public</span>:
+<a name="l00210"></a>00210                 
+<a name="l00215"></a>00215                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao2Fim.html#a8aebf23ca0e1f36a3bfc15073e0b4485" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00216"></a>00216 };
+<a name="l00217"></a>00217 
+<a name="l00219"></a><a class="code" href="classRegiao3Fim.html">00219</a> <span class="keyword">class </span><a class="code" href="classRegiao3Fim.html" title="Especializacao de uma regiao para a regiao 3 do comeco da mesa.">Regiao3Fim</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00220"></a>00220 {
+<a name="l00221"></a>00221         <span class="keyword">private</span>:
+<a name="l00222"></a>00222                 
+<a name="l00230"></a>00230                 <span class="keywordtype">void</span> mesaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00231"></a>00231                 
+<a name="l00239"></a>00239                 <span class="keywordtype">void</span> mesaNaoBuchaNovaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y, <span class="keywordtype">int</span> largura_restante);
+<a name="l00240"></a>00240                 
+<a name="l00248"></a>00248                 <span class="keywordtype">void</span> mesaBuchaNaoHorizontal (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00249"></a>00249                 
+<a name="l00250"></a>00250         <span class="keyword">public</span>:
+<a name="l00251"></a>00251                 
+<a name="l00256"></a>00256                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao3Fim.html#acfbff7cf6d2848248d827efa6bf61663" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00257"></a>00257 };
+<a name="l00258"></a>00258 
+<a name="l00260"></a><a class="code" href="classRegiao4Fim.html">00260</a> <span class="keyword">class </span><a class="code" href="classRegiao4Fim.html" title="Especializacao de uma regiao para a regiao 4 do comeco da mesa.">Regiao4Fim</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00261"></a>00261 {
+<a name="l00262"></a>00262         <span class="keyword">private</span>:
+<a name="l00263"></a>00263                 
+<a name="l00271"></a>00271                 <span class="keywordtype">void</span> mesaNaoBucha (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa, <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>** nova_regiao, <a class="code" href="engine_8hpp.html#aae1ca748942959d543e81a5183ed093c" title="Indica se aquele slot esta ocupado ou nao. Se estiver, diz a posicao em que a peca foi jogada...">tEstadoSlot</a>&amp; estado, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00272"></a>00272                 
+<a name="l00273"></a>00273         <span class="keyword">public</span>:
+<a name="l00274"></a>00274                 
+<a name="l00279"></a>00279                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao4Fim.html#a9292ee02c32056919d94d2b9d2c4edbb" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00280"></a>00280 };
+<a name="l00281"></a>00281 
+<a name="l00283"></a><a class="code" href="classRegiao5Fim.html">00283</a> <span class="keyword">class </span><a class="code" href="classRegiao5Fim.html" title="Especializacao de uma regiao para a regiao 5 do comeco da mesa.">Regiao5Fim</a> : <span class="keyword">public</span> <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>
+<a name="l00284"></a>00284 {
+<a name="l00285"></a>00285         <span class="keyword">public</span>:
+<a name="l00286"></a>00286                 
+<a name="l00291"></a>00291                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>* <a class="code" href="classRegiao5Fim.html#a25df09bde149c0479f4c02264885299f" title="Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixa...">setEstadoXY</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada, <span class="keyword">const</span> <a class="code" href="classSlotPeca.html" title="Estrutura de uma posicao da mesa para se encaixar uma peca.">SlotPeca</a>&amp; slot_mesa);
+<a name="l00292"></a>00292 };
+<a name="l00293"></a>00293 
+<a name="l00295"></a><a class="code" href="classView.html">00295</a> <span class="keyword">class </span><a class="code" href="classView.html" title="Classe para gerenciar a interface com o usuario.">View</a>
+<a name="l00296"></a>00296 {
+<a name="l00297"></a>00297         <span class="keyword">private</span>:
+<a name="l00298"></a>00298                 
+<a name="l00300"></a>00300                 <span class="keyword">static</span> <a class="code" href="classView.html" title="Classe para gerenciar a interface com o usuario.">View</a>*    _instance;
+<a name="l00301"></a>00301                 
+<a name="l00303"></a>00303                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>*         regiao_comeco;
+<a name="l00304"></a>00304                 
+<a name="l00306"></a>00306                 <a class="code" href="classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa...">Regiao</a>*         regiao_fim;
+<a name="l00307"></a>00307                 
+<a name="l00309"></a>00309                 <a class="code" href="classView.html" title="Classe para gerenciar a interface com o usuario.">View</a> () <span class="keywordflow">throw</span> ();
+<a name="l00310"></a>00310                 
+<a name="l00312"></a>00312                 ~<a class="code" href="classView.html" title="Classe para gerenciar a interface com o usuario.">View</a> () <span class="keywordflow">throw</span> ();
+<a name="l00313"></a>00313                 
+<a name="l00316"></a>00316                 <span class="keywordtype">void</span> posicionarPecaComeco (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada) <span class="keywordflow">throw</span> ();
+<a name="l00317"></a>00317                 
+<a name="l00320"></a>00320                 <span class="keywordtype">void</span> posicionarPecaFim (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada) <span class="keywordflow">throw</span> ();
+<a name="l00321"></a>00321                 
+<a name="l00322"></a>00322         <span class="keyword">public</span>:
+<a name="l00323"></a>00323                 
+<a name="l00326"></a>00326                 <span class="keyword">static</span> <a class="code" href="classView.html" title="Classe para gerenciar a interface com o usuario.">View</a>* <a class="code" href="classView.html#ab480b60f134cfc7271c7b2a52425b3e1" title="Instancia ou apenas retorna o ponteiro para o singleton desta classe.">instance</a> () <span class="keywordflow">throw</span> ();
+<a name="l00327"></a>00327                 
+<a name="l00329"></a>00329                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classView.html#a3d878d86198631ad1b58b29c766481f4" title="Libera o singleton desta classe chamando o destrutor privado.">delete_instance</a> () <span class="keywordflow">throw</span> ();
+<a name="l00330"></a>00330                 
+<a name="l00333"></a>00333                 <span class="keywordtype">void</span> <a class="code" href="classView.html#a00707d8175e595d35408757fc6787437" title="Posiciona uma peca no meio da mesa para que ela seja exibida na tela.">posicionarPrimeiraPeca</a> (<span class="keywordtype">int</span> indice_peca) <span class="keywordflow">throw</span> ();
+<a name="l00334"></a>00334                 
+<a name="l00337"></a>00337                 <span class="keywordtype">void</span> <a class="code" href="classView.html#a36e0fc2d1a1d032623f75845c2e9f073" title="Posiciona uma peca no lugar correto da mesa para que ela seja exibida na tela.">posicionarPeca</a> (<span class="keyword">const</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>&amp; jogada) <span class="keywordflow">throw</span> ();
+<a name="l00338"></a>00338 };
+<a name="l00339"></a>00339 
+<a name="l00340"></a>00340 <span class="comment">// instanciando os membros estaticos do singleton da classe View</span>
+<a name="l00341"></a>00341 <span class="preprocessor">#ifdef VIEW_SERVER</span>
+<a name="l00342"></a>00342 <span class="preprocessor"></span>        <a class="code" href="classView.html" title="Classe para gerenciar a interface com o usuario.">View</a>* View::_instance = NULL;
+<a name="l00343"></a>00343 <span class="preprocessor">#endif</span>
+<a name="l00344"></a>00344 <span class="preprocessor"></span>
+<a name="l00345"></a>00345 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Definições e Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Quarta, 18 de Janeiro de 2012 15:03:39 para Dominó RAXASSAUM por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

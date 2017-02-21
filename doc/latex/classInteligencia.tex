@@ -1,0 +1,115 @@
+\hypertarget{classInteligencia}{
+\section{Referência da Classe Inteligencia}
+\label{classInteligencia}\index{Inteligencia@{Inteligencia}}
+}
+
+
+Classe abstrata para representar a inteligencia de um jogador do jogo de Domino.  
+
+
+
+
+{\ttfamily \#include $<$jogador.hpp$>$}
+
+
+
+Diagrama de Hierarquia para Inteligencia:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=366pt]{classInteligencia__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classInteligencia_ad66cee21015269f35772042f9fa2b97c}{jogarPrimeiraPeca} (\hyperlink{classJogador}{Jogador} $\ast$jogador)=0
+\begin{DoxyCompactList}\small\item\em Metodo abstrato que deve jogar a primeira peca da rodada. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{structsJogada}{sJogada} \hyperlink{classInteligencia_acb6757c0a14fa9d437d99a777af981ba}{fazerJogada} (\hyperlink{classJogador}{Jogador} $\ast$jogador)=0
+\begin{DoxyCompactList}\small\item\em Metodo abstrato para fazer uma jogada para um turno qualquer. \item\end{DoxyCompactList}\item 
+unsigned int \hyperlink{classInteligencia_a613d01c7b6e7f862a110ffafd117782c}{getNivel} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classInteligencia_ae44701b7832469b1f4433651188d9e91}{
+unsigned int \hyperlink{classInteligencia_ae44701b7832469b1f4433651188d9e91}{nivel}}
+\label{classInteligencia_ae44701b7832469b1f4433651188d9e91}
+
+\begin{DoxyCompactList}\small\item\em Nivel de inteligencia do jogador. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe abstrata para representar a inteligencia de um jogador do jogo de Domino. Termos tecnicos do jogo Domino RAXASSAUM:
+\begin{DoxyItemize}
+\item RANDOM: Calouro. Faz escolhas aleatorias.
+\item POPS: Calouro depois de 5 minutos jogando. Joga as pecas com maior peso sem ver nada.
+\item Rachar: Jogar nas pontas com maior peso para impedir o proximo jogador de rolar suas buchas pesadas.
+\item Bucha: \hyperlink{classPeca}{Peca} com o mesmo numero dos dois lados.
+\item Rolar: Jogar uma bucha. 
+\end{DoxyItemize}
+
+\subsection{Métodos}
+\hypertarget{classInteligencia_acb6757c0a14fa9d437d99a777af981ba}{
+\index{Inteligencia@{Inteligencia}!fazerJogada@{fazerJogada}}
+\index{fazerJogada@{fazerJogada}!Inteligencia@{Inteligencia}}
+\subsubsection[{fazerJogada}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf sJogada} Inteligencia::fazerJogada (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{ jogador}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classInteligencia_acb6757c0a14fa9d437d99a777af981ba}
+
+
+Metodo abstrato para fazer uma jogada para um turno qualquer. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogador}]Ponteiro para o jogador que esta executando a jogada \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Jogada feita pela inteligencia artificial deste jogador 
+\end{DoxyReturn}
+
+
+Implementado por \hyperlink{classBurrice_ae5f4b6a9faf6217e76f403d76cc50a68}{Burrice}, \hyperlink{classInteligenciaNivel1_a36f443c99f33ab5689fd4093c2d6eb2d}{InteligenciaNivel1} e \hyperlink{classInteligenciaNivel2_afff2fde3479f75e8282b330282c68c0e}{InteligenciaNivel2}.
+
+\hypertarget{classInteligencia_a613d01c7b6e7f862a110ffafd117782c}{
+\index{Inteligencia@{Inteligencia}!getNivel@{getNivel}}
+\index{getNivel@{getNivel}!Inteligencia@{Inteligencia}}
+\subsubsection[{getNivel}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Inteligencia::getNivel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classInteligencia_a613d01c7b6e7f862a110ffafd117782c}
+\begin{DoxyReturn}{Retorna}
+O nivel desta inteligencia 
+\end{DoxyReturn}
+\hypertarget{classInteligencia_ad66cee21015269f35772042f9fa2b97c}{
+\index{Inteligencia@{Inteligencia}!jogarPrimeiraPeca@{jogarPrimeiraPeca}}
+\index{jogarPrimeiraPeca@{jogarPrimeiraPeca}!Inteligencia@{Inteligencia}}
+\subsubsection[{jogarPrimeiraPeca}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Inteligencia::jogarPrimeiraPeca (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{ jogador}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classInteligencia_ad66cee21015269f35772042f9fa2b97c}
+
+
+Metodo abstrato que deve jogar a primeira peca da rodada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogador}]Ponteiro para o jogador que esta executando a jogada \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Indice da peca que foi jogada 
+\end{DoxyReturn}
+
+
+Implementado por \hyperlink{classBurrice_a6ca38eb99bc6cf3d106b915bad981178}{Burrice}, \hyperlink{classInteligenciaNivel1_adef4d79445d1b1e5537cf386923d2a4e}{InteligenciaNivel1} e \hyperlink{classInteligenciaNivel2_a2e30feca2d1071705638d33f825ef207}{InteligenciaNivel2}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+include/model/\hyperlink{jogador_8hpp}{jogador.hpp}\end{DoxyCompactItemize}

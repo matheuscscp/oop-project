@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classRegiao.html" title="Classe abstrata para determinar a regiao da nova peca que esta sendo encaixada na mesa..." alt="" coords="5,245,69,275"/>
+<area shape="rect" id="node3" href="$classRegiao1Comeco.html" title="Especializacao de uma regiao para a regiao 1 do comeco da mesa." alt="" coords="117,5,243,35"/>
+<area shape="rect" id="node5" href="$classRegiao1Fim.html" title="Especializacao de uma regiao para a regiao 1 do comeco da mesa." alt="" coords="133,59,227,88"/>
+<area shape="rect" id="node7" href="$classRegiao2Comeco.html" title="Especializacao de uma regiao para a regiao 2 do comeco da mesa." alt="" coords="117,112,243,141"/>
+<area shape="rect" id="node9" href="$classRegiao2Fim.html" title="Especializacao de uma regiao para a regiao 2 do comeco da mesa." alt="" coords="133,165,227,195"/>
+<area shape="rect" id="node11" href="$classRegiao3Comeco.html" title="Especializacao de uma regiao para a regiao 3 do comeco da mesa." alt="" coords="117,219,243,248"/>
+<area shape="rect" id="node13" href="$classRegiao3Fim.html" title="Especializacao de uma regiao para a regiao 3 do comeco da mesa." alt="" coords="133,272,227,301"/>
+<area shape="rect" id="node15" href="$classRegiao4Comeco.html" title="Especializacao de uma regiao para a regiao 4 do comeco da mesa." alt="" coords="117,325,243,355"/>
+<area shape="rect" id="node17" href="$classRegiao4Fim.html" title="Especializacao de uma regiao para a regiao 4 do comeco da mesa." alt="" coords="133,379,227,408"/>
+<area shape="rect" id="node19" href="$classRegiao5Comeco.html" title="Especializacao de uma regiao para a regiao 5 do comeco da mesa." alt="" coords="117,432,243,461"/>
+<area shape="rect" id="node21" href="$classRegiao5Fim.html" title="Especializacao de uma regiao para a regiao 5 do comeco da mesa." alt="" coords="133,485,227,515"/>
+</map>

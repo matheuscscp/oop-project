@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$structsLogo.html" title="Estrutura para armazenar os atributos da tela de boas&#45;vindas/ate&#45;logo." alt="" coords="5,117,64,147"/>
+<area shape="rect" id="node5" href="$classImagem.html" title="Definicoes da classe que lida com imagens." alt="" coords="63,5,137,35"/>
+<area shape="rect" id="node7" href="$structsJogo.html" title="Estrutura para armazenar as imagens do jogo de Domino." alt="" coords="137,117,193,147"/>
+<area shape="rect" id="node10" href="$structsEstruturaSDL.html" title="Estrutura para armazenar os ponteiros da instancia da SDL." alt="" coords="217,117,332,147"/>
+<area shape="rect" id="node12" href="$structsLogMsg.html" title="Estrutura para armazenar os atributos das mensagens de log (mensagens explicativas ao usuario)..." alt="" coords="356,117,433,147"/>
+<area shape="rect" id="node14" href="$structsTextoConfig.html" title="Estrutura para armazenar a formatacao padrao de um texto." alt="" coords="457,117,559,147"/>
+</map>

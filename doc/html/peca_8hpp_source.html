@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dominó RAXASSAUM: Código-Fonte de include/model/peca.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>include/model/peca.hpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="peca_8hpp.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef PECA_HPP</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define PECA_HPP</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="comment">/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span>
+<a name="l00014"></a>00014 <span class="comment"> *                                      INCLUDES E DEFINES</span>
+<a name="l00015"></a>00015 <span class="comment"> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00018"></a>00018 
+<a name="l00022"></a><a class="code" href="peca_8hpp.html#a5c5ebd9051fe6fd7bcd076f02c9f140b">00022</a> <span class="preprocessor">#define pecas   Peca::instance ()</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span>
+<a name="l00024"></a>00024 <span class="comment">/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span>
+<a name="l00025"></a>00025 <span class="comment"> *                                      CLASSES</span>
+<a name="l00026"></a>00026 <span class="comment"> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</span>
+<a name="l00027"></a>00027 
+<a name="l00029"></a><a class="code" href="classPeca.html">00029</a> <span class="keyword">class </span><a class="code" href="classPeca.html" title="Representa as pecas do jogo.">Peca</a>
+<a name="l00030"></a>00030 {
+<a name="l00031"></a>00031         <span class="keyword">private</span>:
+<a name="l00032"></a>00032                 
+<a name="l00034"></a>00034                 <span class="keyword">static</span> <a class="code" href="classPeca.html" title="Representa as pecas do jogo.">Peca</a>*    _instance;
+<a name="l00035"></a>00035                 
+<a name="l00037"></a>00037                 <span class="keywordtype">int</span>             ladoA;
+<a name="l00038"></a>00038                 
+<a name="l00040"></a>00040                 <span class="keywordtype">int</span>             ladoB;
+<a name="l00041"></a>00041                 
+<a name="l00043"></a>00043                 <span class="keywordtype">bool</span>            _bucha;
+<a name="l00044"></a>00044                 
+<a name="l00046"></a>00046                 std::string     nome;
+<a name="l00047"></a>00047                 
+<a name="l00049"></a>00049                                 <a class="code" href="classPeca.html" title="Representa as pecas do jogo.">Peca</a> () <span class="keywordflow">throw</span> () {}
+<a name="l00050"></a>00050                 
+<a name="l00052"></a>00052                                 ~<a class="code" href="classPeca.html" title="Representa as pecas do jogo.">Peca</a> () <span class="keywordflow">throw</span> () {}
+<a name="l00053"></a>00053                 
+<a name="l00057"></a>00057                 <span class="keywordtype">void</span>            <span class="keyword">set</span> (<span class="keywordtype">int</span> ladoA, <span class="keywordtype">int</span> ladoB) <span class="keywordflow">throw</span> ();
+<a name="l00058"></a>00058                 
+<a name="l00060"></a>00060                 <span class="keywordtype">void</span>            setNome () <span class="keywordflow">throw</span> ();
+<a name="l00061"></a>00061                 
+<a name="l00062"></a>00062         <span class="keyword">public</span>:
+<a name="l00063"></a>00063                 
+<a name="l00066"></a>00066                 <span class="keyword">static</span> <a class="code" href="classPeca.html" title="Representa as pecas do jogo.">Peca</a>*    <a class="code" href="classPeca.html#a863feb25d9163cb47306f86fc7fe4273" title="Instancia o singleton das pecas ou apenas retorna uma copia da peca indicada pelo parametro passado...">instance</a> () <span class="keywordflow">throw</span> ();
+<a name="l00067"></a>00067                 
+<a name="l00069"></a>00069                 <span class="keyword">static</span> <span class="keywordtype">void</span>     <a class="code" href="classPeca.html#acbb93a2f56bfe7c7b6868bb9cef76fda" title="Libera as pecas do singleton.">delete_instance</a> () <span class="keywordflow">throw</span> ();
+<a name="l00070"></a>00070                 
+<a name="l00073"></a><a class="code" href="classPeca.html#ac4cdffabf0200c1afdd295e61174c824">00073</a>                 <span class="keywordtype">int</span>             <a class="code" href="classPeca.html#ac4cdffabf0200c1afdd295e61174c824" title="Metodo de acesso.">getLadoA</a> ()     { <span class="keywordflow">return</span> this-&gt;ladoA; }
+<a name="l00074"></a>00074                 
+<a name="l00077"></a><a class="code" href="classPeca.html#a3d5c0c01298e00552d525dad307c9438">00077</a>                 <span class="keywordtype">int</span>             <a class="code" href="classPeca.html#a3d5c0c01298e00552d525dad307c9438" title="Metodo de acesso.">getLadoB</a> ()     { <span class="keywordflow">return</span> this-&gt;ladoB; }
+<a name="l00078"></a>00078                 
+<a name="l00081"></a><a class="code" href="classPeca.html#a0e206bb71b79bda0f4afc3cc2a3cdd89">00081</a>                 <span class="keywordtype">bool</span>            <a class="code" href="classPeca.html#a0e206bb71b79bda0f4afc3cc2a3cdd89" title="Metodo de acesso.">bucha</a> ()        { <span class="keywordflow">return</span> this-&gt;_bucha; }
+<a name="l00082"></a>00082                 
+<a name="l00085"></a><a class="code" href="classPeca.html#aebeb13e1a53f511cf9a21b2505b66d34">00085</a>                 std::string     <a class="code" href="classPeca.html#aebeb13e1a53f511cf9a21b2505b66d34" title="Metodo de acesso.">getNome</a> ()      { <span class="keywordflow">return</span> this-&gt;nome; }
+<a name="l00086"></a>00086 };
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="comment">/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span>
+<a name="l00089"></a>00089 <span class="comment"> *                                      FIM</span>
+<a name="l00090"></a>00090 <span class="comment"> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</span>
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="comment">// instancia os membros static do singleton das pecas</span>
+<a name="l00093"></a>00093 <span class="preprocessor">#ifdef PECA_SERVER</span>
+<a name="l00094"></a>00094 <span class="preprocessor"></span>        <a class="code" href="classPeca.html" title="Representa as pecas do jogo.">Peca</a>* Peca::_instance = NULL;
+<a name="l00095"></a>00095 <span class="preprocessor">#endif</span>
+<a name="l00096"></a>00096 <span class="preprocessor"></span>
+<a name="l00097"></a>00097 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Definições e Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Quarta, 18 de Janeiro de 2012 15:03:39 para Dominó RAXASSAUM por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

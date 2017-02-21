@@ -1,0 +1,101 @@
+\hypertarget{classInteligenciaNivel2}{
+\section{Referência da Classe InteligenciaNivel2}
+\label{classInteligenciaNivel2}\index{InteligenciaNivel2@{InteligenciaNivel2}}
+}
+
+
+Implementacao do segundo nivel de inteligencia artificial possivel para o jogo de Domino, ainda e POPS, mas tenta rachar.  
+
+
+
+
+{\ttfamily \#include $<$jogador.hpp$>$}
+
+
+
+Diagrama de Hierarquia para InteligenciaNivel2:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classInteligenciaNivel2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para InteligenciaNivel2:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classInteligenciaNivel2__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classInteligenciaNivel2_a5f5acc27c7d4e1238f08ee9aa66a281c}{
+\hyperlink{classInteligenciaNivel2_a5f5acc27c7d4e1238f08ee9aa66a281c}{InteligenciaNivel2} ()}
+\label{classInteligenciaNivel2_a5f5acc27c7d4e1238f08ee9aa66a281c}
+
+\begin{DoxyCompactList}\small\item\em Construtor. \item\end{DoxyCompactList}\item 
+int \hyperlink{classInteligenciaNivel2_a2e30feca2d1071705638d33f825ef207}{jogarPrimeiraPeca} (\hyperlink{classJogador}{Jogador} $\ast$jogador)
+\begin{DoxyCompactList}\small\item\em Comeca com a primeira bucha nao seca, ou com a primeira bucha (caso todas sejam secas), ou com a primeira peca caso nao hajam buchas. \item\end{DoxyCompactList}\item 
+\hyperlink{structsJogada}{sJogada} \hyperlink{classInteligenciaNivel2_afff2fde3479f75e8282b330282c68c0e}{fazerJogada} (\hyperlink{classJogador}{Jogador} $\ast$jogador)
+\begin{DoxyCompactList}\small\item\em Encaixa a primeira tentativa POPS mais inteligente que der certo. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Implementacao do segundo nivel de inteligencia artificial possivel para o jogo de Domino, ainda e POPS, mas tenta rachar. 
+
+\subsection{Métodos}
+\hypertarget{classInteligenciaNivel2_afff2fde3479f75e8282b330282c68c0e}{
+\index{InteligenciaNivel2@{InteligenciaNivel2}!fazerJogada@{fazerJogada}}
+\index{fazerJogada@{fazerJogada}!InteligenciaNivel2@{InteligenciaNivel2}}
+\subsubsection[{fazerJogada}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sJogada} InteligenciaNivel2::fazerJogada (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{ jogador}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classInteligenciaNivel2_afff2fde3479f75e8282b330282c68c0e}
+
+
+Encaixa a primeira tentativa POPS mais inteligente que der certo. 
+
+Ordem das tentativas (uma peca depois da outra): pecaLadoB com comecoMesa pecaLadoB com fimMesa pecaLadoA com comecoMesa pecaLadoA com fimMesa 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogador}]Ponteiro para o jogador que esta executando a jogada \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Jogada feita pela inteligencia artificial deste jogador 
+\end{DoxyReturn}
+
+
+Implementa \hyperlink{classInteligencia_acb6757c0a14fa9d437d99a777af981ba}{Inteligencia}.
+
+\hypertarget{classInteligenciaNivel2_a2e30feca2d1071705638d33f825ef207}{
+\index{InteligenciaNivel2@{InteligenciaNivel2}!jogarPrimeiraPeca@{jogarPrimeiraPeca}}
+\index{jogarPrimeiraPeca@{jogarPrimeiraPeca}!InteligenciaNivel2@{InteligenciaNivel2}}
+\subsubsection[{jogarPrimeiraPeca}]{\setlength{\rightskip}{0pt plus 5cm}int InteligenciaNivel2::jogarPrimeiraPeca (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{ jogador}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classInteligenciaNivel2_a2e30feca2d1071705638d33f825ef207}
+
+
+Comeca com a primeira bucha nao seca, ou com a primeira bucha (caso todas sejam secas), ou com a primeira peca caso nao hajam buchas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogador}]Ponteiro para o jogador que esta executando a jogada \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Indice da peca que foi jogada 
+\end{DoxyReturn}
+
+
+Implementa \hyperlink{classInteligencia_ad66cee21015269f35772042f9fa2b97c}{Inteligencia}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/model/\hyperlink{jogador_8hpp}{jogador.hpp}\item 
+src/model/\hyperlink{jogador_8cpp}{jogador.cpp}\end{DoxyCompactItemize}

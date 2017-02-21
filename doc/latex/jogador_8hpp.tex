@@ -1,0 +1,107 @@
+\hypertarget{jogador_8hpp}{
+\section{Referência do Arquivo include/model/jogador.hpp}
+\label{jogador_8hpp}\index{include/model/jogador.hpp@{include/model/jogador.hpp}}
+}
+
+
+Declaracao dos defines, classes e metodos dos jogadores do jogo de Domino.  
+
+
+{\ttfamily \#include $<$cstdlib$>$}\par
+{\ttfamily \#include \char`\"{}./mesa.hpp\char`\"{}}\par
+Gráfico de dependência de inclusões para jogador.hpp:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{jogador_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{jogador_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classInteligencia}{Inteligencia}
+\begin{DoxyCompactList}\small\item\em Classe abstrata para representar a inteligencia de um jogador do jogo de Domino. \item\end{DoxyCompactList}\item 
+class \hyperlink{classBurrice}{Burrice}
+\begin{DoxyCompactList}\small\item\em Implementacao do nivel de inteligencia artificial mais \char`\"{}burro\char`\"{} possivel para o jogo de Domino, vulgo RANDOM!! \item\end{DoxyCompactList}\item 
+class \hyperlink{classInteligenciaNivel1}{InteligenciaNivel1}
+\begin{DoxyCompactList}\small\item\em Implementacao do primeiro nivel de inteligencia artificial possivel para o jogo de Domino, vulgo POPS!! \item\end{DoxyCompactList}\item 
+class \hyperlink{classInteligenciaNivel2}{InteligenciaNivel2}
+\begin{DoxyCompactList}\small\item\em Implementacao do segundo nivel de inteligencia artificial possivel para o jogo de Domino, ainda e POPS, mas tenta rachar. \item\end{DoxyCompactList}\item 
+class \hyperlink{classJogador}{Jogador}
+\begin{DoxyCompactList}\small\item\em Representa um jogador do jogo de Domino. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jogador_8hpp_a082e32048409e8c35a66bc876ea1bd58}{NIVEL\_\-ALERTA}~20
+\begin{DoxyCompactList}\small\item\em Nivel de alerta de um jogador. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{jogador_8hpp_a95f622058ff2cbf9fb1c03ee12e8559a}{INTELIGENCIA\_\-MAX}~2
+\begin{DoxyCompactList}\small\item\em \hyperlink{classInteligencia}{Inteligencia} maxima. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{jogador_8hpp_ab2af9973ab9f1d0c5c4f1973fd84fa6d}{jogadores}~Jogador::instance ()
+\begin{DoxyCompactList}\small\item\em Instancia dos jogadores. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{jogador_8hpp_a9ef0cafefe0b7dd2c74e7c75452decc1}{new\_\-rand} (int mod)
+\begin{DoxyCompactList}\small\item\em Utiliza a funcao rand () para gerar valores aleatorios e travar o programa durante um segundo. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Declaracao dos defines, classes e metodos dos jogadores do jogo de Domino. 
+
+\subsection{Definições e macros}
+\hypertarget{jogador_8hpp_a95f622058ff2cbf9fb1c03ee12e8559a}{
+\index{jogador.hpp@{jogador.hpp}!INTELIGENCIA\_\-MAX@{INTELIGENCIA\_\-MAX}}
+\index{INTELIGENCIA\_\-MAX@{INTELIGENCIA\_\-MAX}!jogador.hpp@{jogador.hpp}}
+\subsubsection[{INTELIGENCIA\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define INTELIGENCIA\_\-MAX~2}}
+\label{jogador_8hpp_a95f622058ff2cbf9fb1c03ee12e8559a}
+
+
+\hyperlink{classInteligencia}{Inteligencia} maxima. 
+
+Define um macro para dizer o nivel maximo de inteligencia implementado \hypertarget{jogador_8hpp_ab2af9973ab9f1d0c5c4f1973fd84fa6d}{
+\index{jogador.hpp@{jogador.hpp}!jogadores@{jogadores}}
+\index{jogadores@{jogadores}!jogador.hpp@{jogador.hpp}}
+\subsubsection[{jogadores}]{\setlength{\rightskip}{0pt plus 5cm}\#define jogadores~Jogador::instance ()}}
+\label{jogador_8hpp_ab2af9973ab9f1d0c5c4f1973fd84fa6d}
+
+
+Instancia dos jogadores. 
+
+Define um macro para simplificar a chamada ao singleton de jogadores \hypertarget{jogador_8hpp_a082e32048409e8c35a66bc876ea1bd58}{
+\index{jogador.hpp@{jogador.hpp}!NIVEL\_\-ALERTA@{NIVEL\_\-ALERTA}}
+\index{NIVEL\_\-ALERTA@{NIVEL\_\-ALERTA}!jogador.hpp@{jogador.hpp}}
+\subsubsection[{NIVEL\_\-ALERTA}]{\setlength{\rightskip}{0pt plus 5cm}\#define NIVEL\_\-ALERTA~20}}
+\label{jogador_8hpp_a082e32048409e8c35a66bc876ea1bd58}
+
+
+Nivel de alerta de um jogador. 
+
+Define um macro para o numero de pontos necessarios para ativar o alerta de um jogador 
+
+\subsection{Funções}
+\hypertarget{jogador_8hpp_a9ef0cafefe0b7dd2c74e7c75452decc1}{
+\index{jogador.hpp@{jogador.hpp}!new\_\-rand@{new\_\-rand}}
+\index{new\_\-rand@{new\_\-rand}!jogador.hpp@{jogador.hpp}}
+\subsubsection[{new\_\-rand}]{\setlength{\rightskip}{0pt plus 5cm}int new\_\-rand (
+\begin{DoxyParamCaption}
+\item[{int}]{ mod}
+\end{DoxyParamCaption}
+)}}
+\label{jogador_8hpp_a9ef0cafefe0b7dd2c74e7c75452decc1}
+
+
+Utiliza a funcao rand () para gerar valores aleatorios e travar o programa durante um segundo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em mod}]Tamanho do intervalo em que o numero aleatorio sera gerado \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um numero aleatorio no intervalo de 0 a mod -\/ 1 
+\end{DoxyReturn}

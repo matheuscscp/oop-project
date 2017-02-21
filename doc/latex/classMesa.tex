@@ -1,0 +1,212 @@
+\hypertarget{classMesa}{
+\section{Referência da Classe Mesa}
+\label{classMesa}\index{Mesa@{Mesa}}
+}
+
+
+Representa a mesa do jogo.  
+
+
+
+
+{\ttfamily \#include $<$mesa.hpp$>$}
+
+
+
+Diagrama de colaboração para Mesa:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classMesa__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMesa_a2d23aa5398a03ea48bc098dca09742cc}{
+void \hyperlink{classMesa_a2d23aa5398a03ea48bc098dca09742cc}{resetar} ()  throw ()}
+\label{classMesa_a2d23aa5398a03ea48bc098dca09742cc}
+
+\begin{DoxyCompactList}\small\item\em Esvazia os indices. \item\end{DoxyCompactList}\item 
+void \hyperlink{classMesa_a0fc48607f94d1b750d2f83533b8416e7}{inserePrimeiraPeca} (int indice\_\-peca)  throw ()
+\begin{DoxyCompactList}\small\item\em Insere uma peca no centro da mesa. \item\end{DoxyCompactList}\item 
+void \hyperlink{classMesa_a17e202d50f0f113700169e93d2a6c140}{insereComeco} (const \hyperlink{structsJogada}{sJogada} \&jogada)  throw ()
+\begin{DoxyCompactList}\small\item\em Insere uma peca no comeco da mesa. \item\end{DoxyCompactList}\item 
+int \hyperlink{classMesa_a5d5a11c6c1b799f037976685b382bd02}{getLadoComeco} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+int \hyperlink{classMesa_a27977e765ff8e91c684734f68949cd5f}{getIndiceComeco} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Retorna o indice da peca na ponta de cima da mesa. \item\end{DoxyCompactList}\item 
+void \hyperlink{classMesa_a3630fabd06b3701cef850b1528143d1a}{insereFim} (const \hyperlink{structsJogada}{sJogada} \&jogada)  throw ()
+\begin{DoxyCompactList}\small\item\em Insere uma peca no fim da mesa. \item\end{DoxyCompactList}\item 
+int \hyperlink{classMesa_a9c1e133003090c88d1d2c6672d67f3d8}{getLadoFim} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso. \item\end{DoxyCompactList}\item 
+int \hyperlink{classMesa_ad86df6da9b91e2a5271880dd12002981}{getIndiceFim} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Retorna o indice da peca na ponta de baixo da mesa. \item\end{DoxyCompactList}\item 
+std::list$<$ int $>$ \& \hyperlink{classMesa_a362745924772f384bb8fc7039a6bb6b7}{getIndicePecas} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Retorna uma referencia para a lista de indices de pecas da mesa. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classMesa}{Mesa} $\ast$ \hyperlink{classMesa_afeb7646c49b1269a0c5e5a605b72c21b}{instance} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Instancia ou apenas retorna o ponteiro da instancia do singleton da mesa. \item\end{DoxyCompactList}\item 
+\hypertarget{classMesa_a78e2890157e5be6829a72d1abaa418ce}{
+static void \hyperlink{classMesa_a78e2890157e5be6829a72d1abaa418ce}{delete\_\-instance} ()  throw ()}
+\label{classMesa_a78e2890157e5be6829a72d1abaa418ce}
+
+\begin{DoxyCompactList}\small\item\em Destroi a instancia do singleton da mesa. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Representa a mesa do jogo. 
+
+\subsection{Métodos}
+\hypertarget{classMesa_a27977e765ff8e91c684734f68949cd5f}{
+\index{Mesa@{Mesa}!getIndiceComeco@{getIndiceComeco}}
+\index{getIndiceComeco@{getIndiceComeco}!Mesa@{Mesa}}
+\subsubsection[{getIndiceComeco}]{\setlength{\rightskip}{0pt plus 5cm}int Mesa::getIndiceComeco (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classMesa_a27977e765ff8e91c684734f68949cd5f}
+
+
+Retorna o indice da peca na ponta de cima da mesa. 
+
+\begin{DoxyReturn}{Retorna}
+Indice da peca na ponta de cima da mesa 
+\end{DoxyReturn}
+\hypertarget{classMesa_ad86df6da9b91e2a5271880dd12002981}{
+\index{Mesa@{Mesa}!getIndiceFim@{getIndiceFim}}
+\index{getIndiceFim@{getIndiceFim}!Mesa@{Mesa}}
+\subsubsection[{getIndiceFim}]{\setlength{\rightskip}{0pt plus 5cm}int Mesa::getIndiceFim (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classMesa_ad86df6da9b91e2a5271880dd12002981}
+
+
+Retorna o indice da peca na ponta de baixo da mesa. 
+
+\begin{DoxyReturn}{Retorna}
+Indice da peca na ponta de baixo da mesa 
+\end{DoxyReturn}
+\hypertarget{classMesa_a362745924772f384bb8fc7039a6bb6b7}{
+\index{Mesa@{Mesa}!getIndicePecas@{getIndicePecas}}
+\index{getIndicePecas@{getIndicePecas}!Mesa@{Mesa}}
+\subsubsection[{getIndicePecas}]{\setlength{\rightskip}{0pt plus 5cm}std::list$<$int$>$\& Mesa::getIndicePecas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classMesa_a362745924772f384bb8fc7039a6bb6b7}
+
+
+Retorna uma referencia para a lista de indices de pecas da mesa. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia para a lista de indices de pecas da mesa 
+\end{DoxyReturn}
+\hypertarget{classMesa_a5d5a11c6c1b799f037976685b382bd02}{
+\index{Mesa@{Mesa}!getLadoComeco@{getLadoComeco}}
+\index{getLadoComeco@{getLadoComeco}!Mesa@{Mesa}}
+\subsubsection[{getLadoComeco}]{\setlength{\rightskip}{0pt plus 5cm}int Mesa::getLadoComeco (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classMesa_a5d5a11c6c1b799f037976685b382bd02}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Valor inteiro do lado aberto da peca que esta no comeco da mesa 
+\end{DoxyReturn}
+\hypertarget{classMesa_a9c1e133003090c88d1d2c6672d67f3d8}{
+\index{Mesa@{Mesa}!getLadoFim@{getLadoFim}}
+\index{getLadoFim@{getLadoFim}!Mesa@{Mesa}}
+\subsubsection[{getLadoFim}]{\setlength{\rightskip}{0pt plus 5cm}int Mesa::getLadoFim (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classMesa_a9c1e133003090c88d1d2c6672d67f3d8}
+
+
+Metodo de acesso. 
+
+\begin{DoxyReturn}{Retorna}
+Valor inteiro do lado aberto da peca que esta no fim da mesa 
+\end{DoxyReturn}
+\hypertarget{classMesa_a17e202d50f0f113700169e93d2a6c140}{
+\index{Mesa@{Mesa}!insereComeco@{insereComeco}}
+\index{insereComeco@{insereComeco}!Mesa@{Mesa}}
+\subsubsection[{insereComeco}]{\setlength{\rightskip}{0pt plus 5cm}void Mesa::insereComeco (
+\begin{DoxyParamCaption}
+\item[{const {\bf sJogada} \&}]{ jogada}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classMesa_a17e202d50f0f113700169e93d2a6c140}
+
+
+Insere uma peca no comeco da mesa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogada}]Estrutura contendo as informacoes necessarias para inserir a peca no comeco da mesa \end{DoxyParams}
+\hypertarget{classMesa_a3630fabd06b3701cef850b1528143d1a}{
+\index{Mesa@{Mesa}!insereFim@{insereFim}}
+\index{insereFim@{insereFim}!Mesa@{Mesa}}
+\subsubsection[{insereFim}]{\setlength{\rightskip}{0pt plus 5cm}void Mesa::insereFim (
+\begin{DoxyParamCaption}
+\item[{const {\bf sJogada} \&}]{ jogada}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classMesa_a3630fabd06b3701cef850b1528143d1a}
+
+
+Insere uma peca no fim da mesa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogada}]Estrutura contendo as informacoes necessarias para inserir a peca no fim da mesa \end{DoxyParams}
+\hypertarget{classMesa_a0fc48607f94d1b750d2f83533b8416e7}{
+\index{Mesa@{Mesa}!inserePrimeiraPeca@{inserePrimeiraPeca}}
+\index{inserePrimeiraPeca@{inserePrimeiraPeca}!Mesa@{Mesa}}
+\subsubsection[{inserePrimeiraPeca}]{\setlength{\rightskip}{0pt plus 5cm}void Mesa::inserePrimeiraPeca (
+\begin{DoxyParamCaption}
+\item[{int}]{ indice\_\-peca}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classMesa_a0fc48607f94d1b750d2f83533b8416e7}
+
+
+Insere uma peca no centro da mesa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em indice\_\-peca}]Indice da peca que esta sendo inserida \end{DoxyParams}
+\hypertarget{classMesa_afeb7646c49b1269a0c5e5a605b72c21b}{
+\index{Mesa@{Mesa}!instance@{instance}}
+\index{instance@{instance}!Mesa@{Mesa}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mesa} $\ast$ Mesa::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classMesa_afeb7646c49b1269a0c5e5a605b72c21b}
+
+
+Instancia ou apenas retorna o ponteiro da instancia do singleton da mesa. 
+
+\begin{DoxyReturn}{Retorna}
+Instancia do singleton da mesa 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/model/\hyperlink{mesa_8hpp}{mesa.hpp}\item 
+src/model/\hyperlink{mesa_8cpp}{mesa.cpp}\end{DoxyCompactItemize}

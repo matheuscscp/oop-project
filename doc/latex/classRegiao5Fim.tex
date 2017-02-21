@@ -1,0 +1,72 @@
+\hypertarget{classRegiao5Fim}{
+\section{Referência da Classe Regiao5Fim}
+\label{classRegiao5Fim}\index{Regiao5Fim@{Regiao5Fim}}
+}
+
+
+Especializacao de uma regiao para a regiao 5 do comeco da mesa.  
+
+
+
+
+{\ttfamily \#include $<$view.hpp$>$}
+
+
+
+Diagrama de Hierarquia para Regiao5Fim:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classRegiao5Fim__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Regiao5Fim:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classRegiao5Fim__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRegiao}{Regiao} $\ast$ \hyperlink{classRegiao5Fim_a25df09bde149c0479f4c02264885299f}{setEstadoXY} (const \hyperlink{structsJogada}{sJogada} \&jogada, const \hyperlink{classSlotPeca}{SlotPeca} \&slot\_\-mesa)
+\begin{DoxyCompactList}\small\item\em Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixada na mesa. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Especializacao de uma regiao para a regiao 5 do comeco da mesa. 
+
+\subsection{Métodos}
+\hypertarget{classRegiao5Fim_a25df09bde149c0479f4c02264885299f}{
+\index{Regiao5Fim@{Regiao5Fim}!setEstadoXY@{setEstadoXY}}
+\index{setEstadoXY@{setEstadoXY}!Regiao5Fim@{Regiao5Fim}}
+\subsubsection[{setEstadoXY}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Regiao} $\ast$ Regiao5Fim::setEstadoXY (
+\begin{DoxyParamCaption}
+\item[{const {\bf sJogada} \&}]{ jogada, }
+\item[{const {\bf SlotPeca} \&}]{ slot\_\-mesa}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRegiao5Fim_a25df09bde149c0479f4c02264885299f}
+
+
+Metodo concreto que deve encontrar a regiao, o estado e a posicao da nova peca que esta sendo encaixada na mesa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogada}]Referencia para uma jogada constante que determina os outros parametros \item[{\em slot\_\-mesa}]Referencia do slot da ponta da mesa cuja jogada foi feita \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para a regiao em que a nova peca estara encaixada 
+\end{DoxyReturn}
+
+
+Implementa \hyperlink{classRegiao_a933b73213efc9221a5dd009f76bee512}{Regiao}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/view/\hyperlink{view_8hpp}{view.hpp}\item 
+src/view/\hyperlink{view_8cpp}{view.cpp}\end{DoxyCompactItemize}

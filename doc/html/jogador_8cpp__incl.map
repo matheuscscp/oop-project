@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$jogador_8hpp.html" title="Declaracao dos defines, classes e metodos dos jogadores do jogo de Domino." alt="" coords="5,83,219,112"/>
+<area shape="rect" id="node7" href="$mesa_8hpp.html" title="Declaracao dos defines, classes e metodos da mesa do jogo de Domino." alt="" coords="116,160,209,189"/>
+<area shape="rect" id="node11" href="$peca_8hpp.html" title="Declaracao dos defines, classes e metodos relacionadas a uma peca do jogo de Domino." alt="" coords="163,237,251,267"/>
+</map>

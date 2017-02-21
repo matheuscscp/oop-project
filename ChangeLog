@@ -1,0 +1,137 @@
+		 _____                  _             
+		|  __ \                (_)            
+		| |  | | ___  _ __ ___  _ _ __   ___  
+		| |  | |/ _ \| '_ ` _ \| | '_ \ / _ \ 
+		| |__| | (_) | | | | | | | | | | (_) |
+		|_____/ \___/|_| |_| |_|_|_| |_|\___/ 
+ _____          __   __          _____  _____        _    _ __  __ 
+|  __ \    /\   \ \ / /   /\    / ____|/ ____|  /\  | |  | |  \/  |
+| |__) |  /  \   \ V /   /  \  | (___ | (___   /  \ | |  | | \  / |
+|  _  /  / /\ \   > <   / /\ \  \___ \ \___ \ / /\ \| |  | | |\/| |
+| | \ \ / ____ \ / . \ / ____ \ ____) |____) / ____ \ |__| | |  | |
+|_|  \_|_/    \_|_/ \_|_/    \_\_____/|_____/_/    \_\____/|_|  |_|
+
+********************************************************************************
+*                                   INICIO                                     *
+********************************************************************************
+
+2011-12-10	Matheus Pimenta		<matheuscscp@gmail.com>		v1.0
+
+	* Modifiquei a engine para implementar metodos inicializadores e um metodo de fechamento.
+	* Decidi separar os slots da mesa, pois eles foram feitos apenas para resolver o problema da visualização; e a mesa faz parte do modelo.
+	* Agora as responsabilidades do modulo "Regiao" vão fazer parte do componente de visualização.
+	* Criei um modulo chamado "View" para incluir a engine e ser incluído pelo controlar, de modo que não haja inclusão cíclica para resolver o problema das posições das peças na tela.
+	* Separei a classe de imagens do módulo da engine e fiz um novo módulo chamado "Imagem".
+	* Realcei o nome do jogador que está jogando naquele momento ao apertar 'TAB'.
+	* Modifiquei o nome do módulo "Domino_RAXASSAUM" para "partida".
+	* Terminei de arrumar o módulo "View" com as regiões das peças na tela.
+	* Implementei IA nos jogadores.
+	* Tornei o construtor e o destrutor dos jogadores públicos para possibilitar testes unitários.
+
+2011-12-07	Matheus Pimenta		<matheuscscp@gmail.com>		v0.9.7
+
+	* Dividi os módulos em diretórios "model", "view" e "controller".
+	* Coloquei a engine e a partida como singletons.
+	* Incluí as teclas 'ESC', 'q' e 'Q' como eventos para solicitar a saida do programa.
+	* Refatorei o construtor, o destrutor e mais alguns métodos da engine.
+	* Coloquei as pecas, a mesa e os jogadores como, é óbvio, singletons.
+	* Refatorando o controlador principal, foi possível distribuir várias responsabilidades para os modelos (mesa e jogador agora fazem muita coisa).
+	* Coloquei a responsabilidade de encontrar a posicao e o estado das peças num módulo "Regiao", usando o padrão strategy para solucionar este problema.
+
+2011-10-30	Matheus Pimenta		<matheuscscp@gmail.com>		v0.9.4
+
+	* Modifiquei o metodo setNome () da classe Peca.
+	* Gerei um novo Doxyfile pelo meu laptop que gera grafos de inclusões entre os módulos (pacote GraphViz do Doxygen).
+
+2011-10-20	Matheus Pimenta		<matheuscscp@gmail.com>		v0.9.3
+
+	* Movi as pastas de imagens e fontes para a pasta principal (incluí um comando para rodar o jogo no makefile).
+
+2011-10-18	Matheus Pimenta		<matheuscscp@gmail.com>		v0.9.2
+
+	* Modifiquei a maneira de receber eventos da SDL e coloquei tudo em um metodo só.
+	* Troquei o limite de 5 polls de eventos da SDL para dar poll na fila toda.
+	* Troquei a ordem de impressao das log-msgs (coloquei o padrao do jogo Ragnarok).
+	* Redirecionei o cerr para um arquivo.
+
+2011-10-11	Matheus Pimenta		<matheuscscp@gmail.com>		v0.9.1
+
+	* Documentei tudo o que faltava.
+	* Inclui o cabecalho <ctime> no modulo Domino_RAXASSAUM.hpp.
+
+2011-10-10	Matheus Pimenta		<matheuscscp@gmail.com>		v0.9
+
+	* Modifiquei as fontes das mensagens e das pontuacoes.
+	* Completei o nucleo dos turnos no modulo Domino_RAXASSAUM.
+	* Corrigi alguns bugs que encontrei nos primeiros metodos que calculam as posicoes das pecas.
+	* Documentei 99% de tudo o que faltava.
+	* Fiz o README.txt.
+
+2011-10-09	Matheus Pimenta		<matheuscscp@gmail.com>		v0.8
+
+	* Fiz varias modificacoes na main ().
+	* Implementei 99% do nucleo dos turnos no modulo Domino_RAXASSAUM.
+	* Alterei varios arquivos colocando mais metodos de acesso.
+	* Inseri a SDL no diretorio fonte do projeto.
+
+2011-10-07	Alexandre Dantas	<alex.dantas92@gmail.com>	v0.7
+
+	* Implementei metodos da classe Peca, Jogador e Partida.
+	* Organizei a identacao dos modulos peca, jogador e Domino_RAXASSAUM
+	* Documentei os modulos peca, jogador e Domino_RAXASSAUM
+
+2011-10-07	Matheus Pimenta		<matheuscscp@gmail.com>		v0.7
+
+	* Implementei a main ().
+	* Implementei os metodos da classe Mesa.
+
+2011-10-06	Matheus Pimenta		<matheuscscp@gmail.com>		v0.7
+
+	* Terminei todos os metodos da engine.
+	* Incorporei o modulo engine_excecoes.hpp no modulo engine.hpp.
+
+2011-10-06	Alexandre Dantas	<alex.dantas92@gmail.com>	v0.6
+
+	* Editei varios codigos fonte.
+	* Substitui a classe 'Jogo' por 'Partida'.
+	* Redefini o construtor da classe 'Peca'.
+
+2011-10-06	Matheus Pimenta		<matheuscscp@gmail.com>		v0.6
+
+	* Quase terminei os metodos da engine.
+
+2011-10-05	Matheus Pimenta		<matheuscscp@gmail.com>		v0.5
+
+	* Exclui todas as excecoes inuteis da versao anterior e pus uma geral e eficaz.
+	* Incorporei a classe Texto a classe Engine e implementei a maioria dos metodos.
+	* Documentei o modulo da Engine.
+	* Modifiquei alguns comentarios no modulo main.cpp.
+
+2011-10-05	Alexandre Dantas	<alex.dantas92@gmail.com>
+
+	* Traduzi mais funcoes/metodos para Jogo, Jogador e Pecas
+	* Modifiquei algumas coisas.
+
+2011-10-05	Matheus Pimenta		<matheuscscp@gmail.com>
+
+	* Coloquei as pastas das imagens e das fontes.
+	* Settei os caminhos do icone e da fonte no construtor da Engine.
+
+2011-10-05	Matheus Pimenta		<matheuscscp@gmail.com>
+
+	* Terminei de fazer as classes Imagem e Texto.
+	* Deixei a classe Engine pela metade.
+
+2011-10-04	Matheus Pimenta		<matheuscscp@gmail.com>
+
+	* Comecei a codificar a engine.
+
+2011-10-04	Alexandre Dantas	<alex.dantas92@gmail.com>
+
+	* ChangeLog criado.
+	* mesa.hpp, mesa.cpp criados.
+	* Brinquei um pouco com o codigo.
+
+2011-10-04	Alexandre Dantas	<alex.dantas92@gmail.com>
+
+	* Criei os arquivos principais.

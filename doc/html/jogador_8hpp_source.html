@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dominó RAXASSAUM: Código-Fonte de include/model/jogador.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>include/model/jogador.hpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="jogador_8hpp.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef JOGADOR_HPP</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define JOGADOR_HPP</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="comment">/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span>
+<a name="l00014"></a>00014 <span class="comment"> *                                      INCLUDES E DEFINES</span>
+<a name="l00015"></a>00015 <span class="comment"> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="mesa_8hpp.html" title="Declaracao dos defines, classes e metodos da mesa do jogo de Domino.">./mesa.hpp</a>&quot;</span>
+<a name="l00020"></a>00020 
+<a name="l00024"></a><a class="code" href="jogador_8hpp.html#a082e32048409e8c35a66bc876ea1bd58">00024</a> <span class="preprocessor">#define NIVEL_ALERTA            20</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span>
+<a name="l00029"></a><a class="code" href="jogador_8hpp.html#a95f622058ff2cbf9fb1c03ee12e8559a">00029</a> <span class="preprocessor">#define INTELIGENCIA_MAX        2</span>
+<a name="l00030"></a>00030 <span class="preprocessor"></span>
+<a name="l00034"></a><a class="code" href="jogador_8hpp.html#ab2af9973ab9f1d0c5c4f1973fd84fa6d">00034</a> <span class="preprocessor">#define jogadores               Jogador::instance ()</span>
+<a name="l00035"></a>00035 <span class="preprocessor"></span>
+<a name="l00036"></a>00036 <span class="comment">/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span>
+<a name="l00037"></a>00037 <span class="comment"> *                                      CLASSES</span>
+<a name="l00038"></a>00038 <span class="comment"> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</span>
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">class </span><a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>;
+<a name="l00041"></a>00041 
+<a name="l00049"></a><a class="code" href="classInteligencia.html">00049</a> <span class="keyword">class </span><a class="code" href="classInteligencia.html" title="Classe abstrata para representar a inteligencia de um jogador do jogo de Domino.">Inteligencia</a>
+<a name="l00050"></a>00050 {
+<a name="l00051"></a>00051         <span class="keyword">protected</span>:
+<a name="l00052"></a>00052                 
+<a name="l00054"></a><a class="code" href="classInteligencia.html#ae44701b7832469b1f4433651188d9e91">00054</a>                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    <a class="code" href="classInteligencia.html#ae44701b7832469b1f4433651188d9e91" title="Nivel de inteligencia do jogador.">nivel</a>;
+<a name="l00055"></a>00055                 
+<a name="l00056"></a>00056         <span class="keyword">public</span>:
+<a name="l00057"></a>00057                 
+<a name="l00061"></a>00061                 <span class="keyword">virtual</span> <span class="keywordtype">int</span>     <a class="code" href="classInteligencia.html#ad66cee21015269f35772042f9fa2b97c" title="Metodo abstrato que deve jogar a primeira peca da rodada.">jogarPrimeiraPeca</a> (<a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* jogador) = 0;
+<a name="l00062"></a>00062                 
+<a name="l00066"></a>00066                 <span class="keyword">virtual</span> <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a> <a class="code" href="classInteligencia.html#acb6757c0a14fa9d437d99a777af981ba" title="Metodo abstrato para fazer uma jogada para um turno qualquer.">fazerJogada</a> (<a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* jogador) = 0;
+<a name="l00067"></a>00067                 
+<a name="l00069"></a><a class="code" href="classInteligencia.html#a613d01c7b6e7f862a110ffafd117782c">00069</a>                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    <a class="code" href="classInteligencia.html#a613d01c7b6e7f862a110ffafd117782c">getNivel</a> () { <span class="keywordflow">return</span> this-&gt;<a class="code" href="classInteligencia.html#ae44701b7832469b1f4433651188d9e91" title="Nivel de inteligencia do jogador.">nivel</a>; }
+<a name="l00070"></a>00070 };
+<a name="l00071"></a>00071 
+<a name="l00073"></a><a class="code" href="classBurrice.html">00073</a> <span class="keyword">class </span><a class="code" href="classBurrice.html" title="Implementacao do nivel de inteligencia artificial mais &amp;quot;burro&amp;quot; possivel para o jogo de Domi...">Burrice</a> : <span class="keyword">public</span> <a class="code" href="classInteligencia.html" title="Classe abstrata para representar a inteligencia de um jogador do jogo de Domino.">Inteligencia</a>
+<a name="l00074"></a>00074 {
+<a name="l00075"></a>00075         <span class="keyword">public</span>:
+<a name="l00076"></a>00076                 
+<a name="l00078"></a><a class="code" href="classBurrice.html#af6cbbc7dce3018615725d45831e8c5f6">00078</a>                         <a class="code" href="classBurrice.html#af6cbbc7dce3018615725d45831e8c5f6" title="Construtor.">Burrice</a> () { this-&gt;<a class="code" href="classInteligencia.html#ae44701b7832469b1f4433651188d9e91" title="Nivel de inteligencia do jogador.">nivel</a> = 0; }
+<a name="l00079"></a>00079                 
+<a name="l00083"></a>00083                 <span class="keywordtype">int</span>     <a class="code" href="classBurrice.html#a6ca38eb99bc6cf3d106b915bad981178" title="Comeca com a primeira peca da mao do jogador.">jogarPrimeiraPeca</a> (<a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* jogador);
+<a name="l00084"></a>00084                 
+<a name="l00093"></a>00093                 <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a> <a class="code" href="classBurrice.html#ae5f4b6a9faf6217e76f403d76cc50a68" title="Encaixa a primeira tentativa que der certo.">fazerJogada</a> (<a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* jogador);
+<a name="l00094"></a>00094 };
+<a name="l00095"></a>00095 
+<a name="l00097"></a><a class="code" href="classInteligenciaNivel1.html">00097</a> <span class="keyword">class </span><a class="code" href="classInteligenciaNivel1.html" title="Implementacao do primeiro nivel de inteligencia artificial possivel para o jogo de Domino...">InteligenciaNivel1</a> : <span class="keyword">public</span> <a class="code" href="classInteligencia.html" title="Classe abstrata para representar a inteligencia de um jogador do jogo de Domino.">Inteligencia</a>
+<a name="l00098"></a>00098 {
+<a name="l00099"></a>00099         <span class="keyword">public</span>:
+<a name="l00100"></a>00100                 
+<a name="l00102"></a><a class="code" href="classInteligenciaNivel1.html#a8fedd9a33f64d1f24133e92b14aa95e9">00102</a>                         <a class="code" href="classInteligenciaNivel1.html#a8fedd9a33f64d1f24133e92b14aa95e9" title="Construtor.">InteligenciaNivel1</a> () { this-&gt;<a class="code" href="classInteligencia.html#ae44701b7832469b1f4433651188d9e91" title="Nivel de inteligencia do jogador.">nivel</a> = 1; }
+<a name="l00103"></a>00103                 
+<a name="l00107"></a>00107                 <span class="keywordtype">int</span>     <a class="code" href="classInteligenciaNivel1.html#adef4d79445d1b1e5537cf386923d2a4e" title="Comeca com a primeira bucha da mao do jogador, ou com a primeira peca caso nao hajam buchas...">jogarPrimeiraPeca</a> (<a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* jogador);
+<a name="l00108"></a>00108                 
+<a name="l00117"></a>00117                 <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a> <a class="code" href="classInteligenciaNivel1.html#a36f443c99f33ab5689fd4093c2d6eb2d" title="Encaixa a primeira tentativa POPS que der certo.">fazerJogada</a> (<a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* jogador);
+<a name="l00118"></a>00118 };
+<a name="l00119"></a>00119 
+<a name="l00121"></a><a class="code" href="classInteligenciaNivel2.html">00121</a> <span class="keyword">class </span><a class="code" href="classInteligenciaNivel2.html" title="Implementacao do segundo nivel de inteligencia artificial possivel para o jogo de Domino...">InteligenciaNivel2</a> : <span class="keyword">public</span> <a class="code" href="classInteligencia.html" title="Classe abstrata para representar a inteligencia de um jogador do jogo de Domino.">Inteligencia</a>
+<a name="l00122"></a>00122 {
+<a name="l00123"></a>00123         <span class="keyword">private</span>:
+<a name="l00124"></a>00124                 
+<a name="l00129"></a>00129                 <span class="keywordtype">bool</span>    buchaSeca (<a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* jogador, <span class="keywordtype">int</span> indice_peca);
+<a name="l00130"></a>00130                 
+<a name="l00131"></a>00131         <span class="keyword">public</span>:
+<a name="l00132"></a>00132                 
+<a name="l00134"></a><a class="code" href="classInteligenciaNivel2.html#a5f5acc27c7d4e1238f08ee9aa66a281c">00134</a>                         <a class="code" href="classInteligenciaNivel2.html#a5f5acc27c7d4e1238f08ee9aa66a281c" title="Construtor.">InteligenciaNivel2</a> () { this-&gt;<a class="code" href="classInteligencia.html#ae44701b7832469b1f4433651188d9e91" title="Nivel de inteligencia do jogador.">nivel</a> = INTELIGENCIA_MAX; }
+<a name="l00135"></a>00135                 
+<a name="l00139"></a>00139                 <span class="keywordtype">int</span>     <a class="code" href="classInteligenciaNivel2.html#a2e30feca2d1071705638d33f825ef207" title="Comeca com a primeira bucha nao seca, ou com a primeira bucha (caso todas sejam secas), ou com a primeira peca caso nao hajam buchas.">jogarPrimeiraPeca</a> (<a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* jogador);
+<a name="l00140"></a>00140                 
+<a name="l00149"></a>00149                 <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a> <a class="code" href="classInteligenciaNivel2.html#afff2fde3479f75e8282b330282c68c0e" title="Encaixa a primeira tentativa POPS mais inteligente que der certo.">fazerJogada</a> (<a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* jogador);
+<a name="l00150"></a>00150 };
+<a name="l00151"></a>00151 
+<a name="l00153"></a><a class="code" href="classJogador.html">00153</a> <span class="keyword">class </span><a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>
+<a name="l00154"></a>00154 {
+<a name="l00155"></a>00155         <span class="keyword">private</span>:
+<a name="l00156"></a>00156                 
+<a name="l00158"></a>00158                 <span class="keyword">static</span> <a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* _instance;
+<a name="l00159"></a>00159                 
+<a name="l00161"></a>00161                 std::list&lt;int&gt;  indice_pecas;
+<a name="l00162"></a>00162                 
+<a name="l00164"></a>00164                 <span class="keywordtype">int</span>             pontuacao;
+<a name="l00165"></a>00165                 
+<a name="l00167"></a>00167                 std::string     nome;
+<a name="l00168"></a>00168                 
+<a name="l00170"></a>00170                 <span class="keywordtype">bool</span>            _jogando;
+<a name="l00171"></a>00171                 
+<a name="l00173"></a>00173                 <a class="code" href="classInteligencia.html" title="Classe abstrata para representar a inteligencia de um jogador do jogo de Domino.">Inteligencia</a>*   inteligencia;
+<a name="l00174"></a>00174                 
+<a name="l00176"></a>00176                 <span class="keywordtype">int</span>             chance_alerta;
+<a name="l00177"></a>00177                 
+<a name="l00180"></a>00180                 <span class="keywordtype">void</span>            init (std::string nome) <span class="keywordflow">throw</span> ();
+<a name="l00181"></a>00181                 
+<a name="l00183"></a>00183                 <span class="keywordtype">void</span>            melhorarInteligencia () <span class="keywordflow">throw</span> ();
+<a name="l00184"></a>00184                 
+<a name="l00185"></a>00185         <span class="keyword">public</span>:
+<a name="l00186"></a>00186                 
+<a name="l00188"></a><a class="code" href="classJogador.html#a94a4939138ce04d2f3ceb68257517ac1">00188</a>                                 <a class="code" href="classJogador.html#a94a4939138ce04d2f3ceb68257517ac1" title="Construtor singleton nao privado para possibilitar testes unitarios.">Jogador</a> () throw () {}
+<a name="l00189"></a>00189                 
+<a name="l00191"></a><a class="code" href="classJogador.html#a3e62c32199fc9cfbcf22cf83f9008be6">00191</a>                                 <a class="code" href="classJogador.html#a3e62c32199fc9cfbcf22cf83f9008be6" title="Destrutor singleton nao privado para possibilitar testes unitarios.">~Jogador</a> () throw () {}
+<a name="l00192"></a>00192                 
+<a name="l00195"></a>00195                 <span class="keyword">static</span> <a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* <a class="code" href="classJogador.html#ae7fa7dab6eb891becc88e50f8c418599" title="Instancia ou apenas retorna o ponteiro da instancia do singleton de jogadores.">instance</a> () throw ();
+<a name="l00196"></a>00196                 
+<a name="l00198"></a>00198                 static <span class="keywordtype">void</span>     <a class="code" href="classJogador.html#a932bd3da3233fca665597ee3de31f34a" title="Libera a instancia do singleton de jogadores.">delete_instance</a> () throw ();
+<a name="l00199"></a>00199                 
+<a name="l00201"></a>00201                 <span class="keywordtype">void</span>            <a class="code" href="classJogador.html#a7ccde2c632166a00e6d91a7b1c7bf030" title="Reseta os pontos de um jogador.">resetarPontuacao</a> () throw ();
+<a name="l00202"></a>00202                 
+<a name="l00204"></a><a class="code" href="classJogador.html#ab581fd038c970e1de055e2a49ec9c609">00204</a>                 <span class="keywordtype">void</span>            <a class="code" href="classJogador.html#ab581fd038c970e1de055e2a49ec9c609" title="Esvazia a lista de indices de pecas.">devolverPecas</a> () throw () { this-&gt;indice_pecas.clear (); }
+<a name="l00205"></a>00205                 
+<a name="l00208"></a>00208                 <span class="keywordtype">void</span>            <a class="code" href="classJogador.html#ac4b77743044e2595e7a849f42059e705" title="Adiciona um indice de peca a lista de indices.">pegarPeca</a> (<span class="keywordtype">int</span> indice_peca) <span class="keywordflow">throw</span> ();
+<a name="l00209"></a>00209                 
+<a name="l00211"></a>00211                 <span class="keywordtype">void</span>            <a class="code" href="classJogador.html#adebea5e3251e37c04af4bd322af56dc5" title="Elimina o pelado da lista de pecas.">jogarPelado</a> () throw ();
+<a name="l00212"></a>00212                 
+<a name="l00215"></a><a class="code" href="classJogador.html#af2737d00fb2e622a3f6efc16fd2ffe53">00215</a>                 <span class="keywordtype">int</span>             <a class="code" href="classJogador.html#af2737d00fb2e622a3f6efc16fd2ffe53" title="Elimina o primeiro indice de peca deste jogador e retorna o indice.">jogarPrimeiraPeca</a> () throw () { <span class="keywordflow">return</span> this-&gt;inteligencia-&gt;<a class="code" href="classInteligencia.html#ad66cee21015269f35772042f9fa2b97c" title="Metodo abstrato que deve jogar a primeira peca da rodada.">jogarPrimeiraPeca</a> ( <span class="keyword">this</span> ); }
+<a name="l00216"></a>00216                 
+<a name="l00218"></a><a class="code" href="classJogador.html#adaa1fda004b5db6610b0c8976634c70f">00218</a>                 <span class="keywordtype">void</span>            <a class="code" href="classJogador.html#adaa1fda004b5db6610b0c8976634c70f" title="Atualiza a flag que diz se o jogandor esta jogando.">mudarFlagJogando</a> () throw () { this-&gt;_jogando = ( !this-&gt;_jogando ); }
+<a name="l00219"></a>00219                 
+<a name="l00222"></a><a class="code" href="classJogador.html#a0270123a28f581760fab650d9fba95e9">00222</a>                 <span class="keywordtype">bool</span>            <a class="code" href="classJogador.html#a0270123a28f581760fab650d9fba95e9" title="Checa se o jogador esta jogando naquele momento.">jogando</a> () throw () { <span class="keywordflow">return</span> this-&gt;_jogando; }
+<a name="l00223"></a>00223                 
+<a name="l00226"></a><a class="code" href="classJogador.html#a57ea21369a77f6d39d0082d562ac1c28">00226</a>                 <span class="keywordtype">bool</span>            <a class="code" href="classJogador.html#a57ea21369a77f6d39d0082d562ac1c28" title="Retorna um valor logico para indicar se o jogando possui o pelado ou nao.">naoTemPelado</a> () throw () { <span class="keywordflow">return</span> ( this-&gt;indice_pecas.back () ); }
+<a name="l00227"></a>00227                 
+<a name="l00230"></a>00230                 <span class="keywordtype">bool</span>            <a class="code" href="classJogador.html#a50bda4df4a489933cdaf1fe9daef0c89" title="Verifica se um jogador pode jogar em um dado turno.">podeJogar</a> () throw ();
+<a name="l00231"></a>00231                 
+<a name="l00234"></a><a class="code" href="classJogador.html#a591a5832e0204c20740adda8e872e026">00234</a>                 <a class="code" href="structsJogada.html" title="Estrutura para procurar e executar jogadas.">sJogada</a>         <a class="code" href="classJogador.html#a591a5832e0204c20740adda8e872e026" title="Procura e faz uma jogada, eliminando o indice da peca da lista.">fazerJogada</a> () throw () { <span class="keywordflow">return</span> this-&gt;inteligencia-&gt;<a class="code" href="classInteligencia.html#acb6757c0a14fa9d437d99a777af981ba" title="Metodo abstrato para fazer uma jogada para um turno qualquer.">fazerJogada</a> ( <span class="keyword">this</span> ); }
+<a name="l00235"></a>00235                 
+<a name="l00238"></a><a class="code" href="classJogador.html#a507ec2dd2de59c29ce3ce0858ff7e013">00238</a>                 <span class="keywordtype">int</span>             <a class="code" href="classJogador.html#a507ec2dd2de59c29ce3ce0858ff7e013" title="Metodo de acesso.">getTotalPecas</a> () throw () { <span class="keywordflow">return</span> this-&gt;indice_pecas.size (); }
+<a name="l00239"></a>00239                 
+<a name="l00242"></a><a class="code" href="classJogador.html#a3aa048567359dfd36094feac3519e567">00242</a>                 <span class="keywordtype">int</span>             <a class="code" href="classJogador.html#a3aa048567359dfd36094feac3519e567" title="Metodo de acesso.">getPontuacao</a> () throw () { <span class="keywordflow">return</span> this-&gt;pontuacao; }
+<a name="l00243"></a>00243                 
+<a name="l00246"></a><a class="code" href="classJogador.html#a28dda560df2901fe50879e3db38b049e">00246</a>                 std::string&amp;    <a class="code" href="classJogador.html#a28dda560df2901fe50879e3db38b049e" title="Metodo de acesso.">getNick</a> () throw () { <span class="keywordflow">return</span> this-&gt;nome; }
+<a name="l00247"></a>00247                 
+<a name="l00249"></a>00249                 <span class="keywordtype">void</span>            <a class="code" href="classJogador.html#a8a53830073199caffe60e9d048b2b149" title="Soma conta os pontos que sobraram na mao do jogador e acumula ao seu placar.">acumularPontos</a> () throw ();
+<a name="l00250"></a>00250                 
+<a name="l00253"></a><a class="code" href="classJogador.html#a9443baea87ab6a121f9c0eb972b2a215">00253</a>                 std::list&lt;<span class="keywordtype">int</span>&gt;&amp; <a class="code" href="classJogador.html#a9443baea87ab6a121f9c0eb972b2a215" title="Retorna uma referencia para a lista de indices de pecas deste jogador.">getIndicePecas</a> () throw () { <span class="keywordflow">return</span> ( this-&gt;indice_pecas ); }
+<a name="l00254"></a>00254 };
+<a name="l00255"></a>00255 
+<a name="l00259"></a>00259 <span class="keywordtype">int</span> <a class="code" href="jogador_8cpp.html#a9ef0cafefe0b7dd2c74e7c75452decc1" title="Utiliza a funcao rand () para gerar valores aleatorios e travar o programa durante um segundo...">new_rand</a> (<span class="keywordtype">int</span> mod);
+<a name="l00260"></a>00260 
+<a name="l00261"></a>00261 <span class="comment">// instanciando os membros estaticos do singleton de jogadores</span>
+<a name="l00262"></a>00262 <span class="preprocessor">#ifdef JOGADOR_SERVER</span>
+<a name="l00263"></a>00263 <span class="preprocessor"></span>        <a class="code" href="classJogador.html" title="Representa um jogador do jogo de Domino.">Jogador</a>* Jogador::_instance = NULL;
+<a name="l00264"></a>00264 <span class="preprocessor">#endif</span>
+<a name="l00265"></a>00265 <span class="preprocessor"></span>
+<a name="l00266"></a>00266 <span class="comment">/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span>
+<a name="l00267"></a>00267 <span class="comment"> *                                      FIM                                     </span>
+<a name="l00268"></a>00268 <span class="comment"> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</span>
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Definições e Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Quarta, 18 de Janeiro de 2012 15:03:39 para Dominó RAXASSAUM por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

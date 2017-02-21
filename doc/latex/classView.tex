@@ -1,0 +1,99 @@
+\hypertarget{classView}{
+\section{Referência da Classe View}
+\label{classView}\index{View@{View}}
+}
+
+
+Classe para gerenciar a interface com o usuario.  
+
+
+
+
+{\ttfamily \#include $<$view.hpp$>$}
+
+
+
+Diagrama de colaboração para View:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classView__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classView_a00707d8175e595d35408757fc6787437}{posicionarPrimeiraPeca} (int indice\_\-peca)  throw ()
+\begin{DoxyCompactList}\small\item\em Posiciona uma peca no meio da mesa para que ela seja exibida na tela. \item\end{DoxyCompactList}\item 
+void \hyperlink{classView_a36e0fc2d1a1d032623f75845c2e9f073}{posicionarPeca} (const \hyperlink{structsJogada}{sJogada} \&jogada)  throw ()
+\begin{DoxyCompactList}\small\item\em Posiciona uma peca no lugar correto da mesa para que ela seja exibida na tela. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classView}{View} $\ast$ \hyperlink{classView_ab480b60f134cfc7271c7b2a52425b3e1}{instance} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Instancia ou apenas retorna o ponteiro para o singleton desta classe. \item\end{DoxyCompactList}\item 
+\hypertarget{classView_a3d878d86198631ad1b58b29c766481f4}{
+static void \hyperlink{classView_a3d878d86198631ad1b58b29c766481f4}{delete\_\-instance} ()  throw ()}
+\label{classView_a3d878d86198631ad1b58b29c766481f4}
+
+\begin{DoxyCompactList}\small\item\em Libera o singleton desta classe chamando o destrutor privado. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe para gerenciar a interface com o usuario. 
+
+\subsection{Métodos}
+\hypertarget{classView_ab480b60f134cfc7271c7b2a52425b3e1}{
+\index{View@{View}!instance@{instance}}
+\index{instance@{instance}!View@{View}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View} $\ast$ View::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classView_ab480b60f134cfc7271c7b2a52425b3e1}
+
+
+Instancia ou apenas retorna o ponteiro para o singleton desta classe. 
+
+\begin{DoxyReturn}{Retorna}
+Ponteiro para o singleton desta classe 
+\end{DoxyReturn}
+\hypertarget{classView_a36e0fc2d1a1d032623f75845c2e9f073}{
+\index{View@{View}!posicionarPeca@{posicionarPeca}}
+\index{posicionarPeca@{posicionarPeca}!View@{View}}
+\subsubsection[{posicionarPeca}]{\setlength{\rightskip}{0pt plus 5cm}void View::posicionarPeca (
+\begin{DoxyParamCaption}
+\item[{const {\bf sJogada} \&}]{ jogada}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classView_a36e0fc2d1a1d032623f75845c2e9f073}
+
+
+Posiciona uma peca no lugar correto da mesa para que ela seja exibida na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em jogada}]Detalhes da jogada que esta sendo feita pelo controlador \end{DoxyParams}
+\hypertarget{classView_a00707d8175e595d35408757fc6787437}{
+\index{View@{View}!posicionarPrimeiraPeca@{posicionarPrimeiraPeca}}
+\index{posicionarPrimeiraPeca@{posicionarPrimeiraPeca}!View@{View}}
+\subsubsection[{posicionarPrimeiraPeca}]{\setlength{\rightskip}{0pt plus 5cm}void View::posicionarPrimeiraPeca (
+\begin{DoxyParamCaption}
+\item[{int}]{ indice\_\-peca}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classView_a00707d8175e595d35408757fc6787437}
+
+
+Posiciona uma peca no meio da mesa para que ela seja exibida na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em indice\_\-peca}]Indice da peca que esta sendo posicionada no meio da mesa \end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/view/\hyperlink{view_8hpp}{view.hpp}\item 
+src/view/\hyperlink{view_8cpp}{view.cpp}\end{DoxyCompactItemize}

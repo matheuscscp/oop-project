@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dominó RAXASSAUM: Referência da Classe Inteligencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;Componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;Componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;Classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos Públicos</a> &#124;
+<a href="#pro-attribs">Atributos Protegidos</a>  </div>
+  <div class="headertitle">
+<h1>Referência da Classe Inteligencia</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Inteligencia" -->
+<p>Classe abstrata para representar a inteligencia de um jogador do jogo de Domino.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="jogador_8hpp_source.html">jogador.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de Hierarquia para Inteligencia:</div>
+<div class="dyncontent">
+<div class="center"><img src="classInteligencia__inherit__graph.png" border="0" usemap="#Inteligencia_inherit__map" alt="Inheritance graph"/></div>
+<map name="Inteligencia_inherit__map" id="Inteligencia_inherit__map">
+<area shape="rect" id="node3" href="classBurrice.html" title="Implementacao do nivel de inteligencia artificial mais &quot;burro&quot; possivel para o jogo de Domi..." alt="" coords="5,83,72,112"/><area shape="rect" id="node5" href="classInteligenciaNivel1.html" title="Implementacao do primeiro nivel de inteligencia artificial possivel para o jogo de Domino..." alt="" coords="96,83,229,112"/><area shape="rect" id="node7" href="classInteligenciaNivel2.html" title="Implementacao do segundo nivel de inteligencia artificial possivel para o jogo de Domino..." alt="" coords="253,83,387,112"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
+
+<p><a href="classInteligencia-members.html">Lista de todos os Membros.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Métodos Públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInteligencia.html#ad66cee21015269f35772042f9fa2b97c">jogarPrimeiraPeca</a> (<a class="el" href="classJogador.html">Jogador</a> *jogador)=0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metodo abstrato que deve jogar a primeira peca da rodada.  <a href="#ad66cee21015269f35772042f9fa2b97c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsJogada.html">sJogada</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInteligencia.html#acb6757c0a14fa9d437d99a777af981ba">fazerJogada</a> (<a class="el" href="classJogador.html">Jogador</a> *jogador)=0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metodo abstrato para fazer uma jogada para um turno qualquer.  <a href="#acb6757c0a14fa9d437d99a777af981ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInteligencia.html#a613d01c7b6e7f862a110ffafd117782c">getNivel</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Atributos Protegidos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae44701b7832469b1f4433651188d9e91"></a><!-- doxytag: member="Inteligencia::nivel" ref="ae44701b7832469b1f4433651188d9e91" args="" -->
+unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInteligencia.html#ae44701b7832469b1f4433651188d9e91">nivel</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Nivel de inteligencia do jogador. <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição Detalhada</h2>
+<p>Classe abstrata para representar a inteligencia de um jogador do jogo de Domino. </p>
+<p>Termos tecnicos do jogo Domino RAXASSAUM:</p>
+<ul>
+<li>RANDOM: Calouro. Faz escolhas aleatorias.</li>
+<li>POPS: Calouro depois de 5 minutos jogando. Joga as pecas com maior peso sem ver nada.</li>
+<li>Rachar: Jogar nas pontas com maior peso para impedir o proximo jogador de rolar suas buchas pesadas.</li>
+<li>Bucha: <a class="el" href="classPeca.html" title="Representa as pecas do jogo.">Peca</a> com o mesmo numero dos dois lados.</li>
+<li>Rolar: Jogar uma bucha. </li>
+</ul>
+<hr/><h2>Métodos</h2>
+<a class="anchor" id="acb6757c0a14fa9d437d99a777af981ba"></a><!-- doxytag: member="Inteligencia::fazerJogada" ref="acb6757c0a14fa9d437d99a777af981ba" args="(Jogador *jogador)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsJogada.html">sJogada</a> Inteligencia::fazerJogada </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classJogador.html">Jogador</a> *&nbsp;</td>
+          <td class="paramname"> <em>jogador</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metodo abstrato para fazer uma jogada para um turno qualquer. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>jogador</em>&nbsp;</td><td>Ponteiro para o jogador que esta executando a jogada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Jogada feita pela inteligencia artificial deste jogador </dd></dl>
+
+<p>Implementado por <a class="el" href="classBurrice.html#ae5f4b6a9faf6217e76f403d76cc50a68">Burrice</a>, <a class="el" href="classInteligenciaNivel1.html#a36f443c99f33ab5689fd4093c2d6eb2d">InteligenciaNivel1</a> e <a class="el" href="classInteligenciaNivel2.html#afff2fde3479f75e8282b330282c68c0e">InteligenciaNivel2</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a613d01c7b6e7f862a110ffafd117782c"></a><!-- doxytag: member="Inteligencia::getNivel" ref="a613d01c7b6e7f862a110ffafd117782c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Inteligencia::getNivel </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="return"><dt><b>Retorna:</b></dt><dd>O nivel desta inteligencia </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad66cee21015269f35772042f9fa2b97c"></a><!-- doxytag: member="Inteligencia::jogarPrimeiraPeca" ref="ad66cee21015269f35772042f9fa2b97c" args="(Jogador *jogador)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Inteligencia::jogarPrimeiraPeca </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classJogador.html">Jogador</a> *&nbsp;</td>
+          <td class="paramname"> <em>jogador</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Metodo abstrato que deve jogar a primeira peca da rodada. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>jogador</em>&nbsp;</td><td>Ponteiro para o jogador que esta executando a jogada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Indice da peca que foi jogada </dd></dl>
+
+<p>Implementado por <a class="el" href="classBurrice.html#a6ca38eb99bc6cf3d106b915bad981178">Burrice</a>, <a class="el" href="classInteligenciaNivel1.html#adef4d79445d1b1e5537cf386923d2a4e">InteligenciaNivel1</a> e <a class="el" href="classInteligenciaNivel2.html#a2e30feca2d1071705638d33f825ef207">InteligenciaNivel2</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte arquivo:<ul>
+<li>include/model/<a class="el" href="jogador_8hpp_source.html">jogador.hpp</a></li>
+</ul>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Definições e Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Quarta, 18 de Janeiro de 2012 15:03:40 para Dominó RAXASSAUM por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

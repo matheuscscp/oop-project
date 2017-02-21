@@ -1,0 +1,117 @@
+\hypertarget{classImagem}{
+\section{Referência da Classe Imagem}
+\label{classImagem}\index{Imagem@{Imagem}}
+}
+
+
+Definicoes da classe que lida com imagens.  
+
+
+
+
+{\ttfamily \#include $<$imagem.hpp$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classImagem_a838fb6966bd204f60f5e527a63e6059c}{Imagem} (SDL\_\-Surface $\ast$p\_\-tela, std::string arquivo, int linhas, int colunas)  throw (ExcecaoEngineCrash)
+\begin{DoxyCompactList}\small\item\em Construtor. \item\end{DoxyCompactList}\item 
+\hypertarget{classImagem_ab0c3a402ec623a6050ad105332d6a40a}{
+\hyperlink{classImagem_ab0c3a402ec623a6050ad105332d6a40a}{$\sim$Imagem} (void)  throw ()}
+\label{classImagem_ab0c3a402ec623a6050ad105332d6a40a}
+
+\begin{DoxyCompactList}\small\item\em Destrutor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classImagem_a7fa8fe7f059c1b7e08bbf0f89005b172}{imprimir} (int linha, int coluna, int x, int y)  throw ()
+\begin{DoxyCompactList}\small\item\em Imprime uma celula da matriz dividida da imagem. \item\end{DoxyCompactList}\item 
+int \hyperlink{classImagem_a80e4d0f649aa3d1e212b572177f6d5ec}{getLargura} (void)  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso para a largura de uma celula. \item\end{DoxyCompactList}\item 
+int \hyperlink{classImagem_a2d2c465a25a6413d49f7943d59ad96e1}{getAltura} (void)  throw ()
+\begin{DoxyCompactList}\small\item\em Metodo de acesso para a altura de uma celula. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Definicoes da classe que lida com imagens. 
+
+\subsection{Construtores \& Destrutores}
+\hypertarget{classImagem_a838fb6966bd204f60f5e527a63e6059c}{
+\index{Imagem@{Imagem}!Imagem@{Imagem}}
+\index{Imagem@{Imagem}!Imagem@{Imagem}}
+\subsubsection[{Imagem}]{\setlength{\rightskip}{0pt plus 5cm}Imagem::Imagem (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{ p\_\-tela, }
+\item[{std::string}]{ arquivo, }
+\item[{int}]{ linhas, }
+\item[{int}]{ colunas}
+\end{DoxyParamCaption}
+)  throw ({\bf ExcecaoEngineCrash})}}
+\label{classImagem_a838fb6966bd204f60f5e527a63e6059c}
+
+
+Construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em p\_\-tela}]Ponteiro para a supercifie da tela \item[{\em arquivo}]String do diretorio do arquivo da imagem \item[{\em linhas}]Numero de linhas da divisao em matriz \item[{\em colunas}]Numero de colunas da divisao em matriz \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+\item[{\em \hyperlink{classExcecaoEngineCrash}{ExcecaoEngineCrash}}]Para o caso do ponteiro da tela ser NULL ou nao ser possivel carregar uma imagem \end{DoxyExceptions}
+
+
+\subsection{Métodos}
+\hypertarget{classImagem_a2d2c465a25a6413d49f7943d59ad96e1}{
+\index{Imagem@{Imagem}!getAltura@{getAltura}}
+\index{getAltura@{getAltura}!Imagem@{Imagem}}
+\subsubsection[{getAltura}]{\setlength{\rightskip}{0pt plus 5cm}int Imagem::getAltura (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classImagem_a2d2c465a25a6413d49f7943d59ad96e1}
+
+
+Metodo de acesso para a altura de uma celula. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a altura em pixels de uma celular da matriz dividida 
+\end{DoxyReturn}
+\hypertarget{classImagem_a80e4d0f649aa3d1e212b572177f6d5ec}{
+\index{Imagem@{Imagem}!getLargura@{getLargura}}
+\index{getLargura@{getLargura}!Imagem@{Imagem}}
+\subsubsection[{getLargura}]{\setlength{\rightskip}{0pt plus 5cm}int Imagem::getLargura (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classImagem_a80e4d0f649aa3d1e212b572177f6d5ec}
+
+
+Metodo de acesso para a largura de uma celula. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a largura em pixels de uma celular da matriz dividida 
+\end{DoxyReturn}
+\hypertarget{classImagem_a7fa8fe7f059c1b7e08bbf0f89005b172}{
+\index{Imagem@{Imagem}!imprimir@{imprimir}}
+\index{imprimir@{imprimir}!Imagem@{Imagem}}
+\subsubsection[{imprimir}]{\setlength{\rightskip}{0pt plus 5cm}void Imagem::imprimir (
+\begin{DoxyParamCaption}
+\item[{int}]{ linha, }
+\item[{int}]{ coluna, }
+\item[{int}]{ x, }
+\item[{int}]{ y}
+\end{DoxyParamCaption}
+)  throw ()}}
+\label{classImagem_a7fa8fe7f059c1b7e08bbf0f89005b172}
+
+
+Imprime uma celula da matriz dividida da imagem. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em linha}]Indice da linha da celula da matriz \item[{\em coluna}]Indice da coluna da celula da matriz \item[{\em x}]Coordenada origem x da impressao na tela da janela da SDL \item[{\em y}]Coordenada origem y da impressao na tela da janela da SDL \end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/view/\hyperlink{imagem_8hpp}{imagem.hpp}\item 
+src/view/\hyperlink{imagem_8cpp}{imagem.cpp}\end{DoxyCompactItemize}
